@@ -62,11 +62,18 @@
                 <source src="assets/video/showreel-loop.mp4" type="video/mp4">
               </video>
             </div>
-            <button class="video-toggle" type="button" aria-pressed="false" hidden>
-              <svg class="icon-pause" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg>
-              <svg class="icon-play" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11a1 1 0 0 0 1.5.86l9-5.5a1 1 0 0 0 0-1.72l-9-5.5A1 1 0 0 0 3 1.5z" fill="currentColor"/></svg>
-              <span class="video-toggle-label">Play video</span>
-            </button>
+            <div class="video-controls" hidden>
+              <button class="video-toggle video-sound" type="button" data-on="false">
+                <svg class="icon-off" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 5h2.5L7 2v10L3.5 9H1z" fill="currentColor"/><path d="M9.5 4.5a3.5 3.5 0 0 1 0 5M11.5 2.5a6.3 6.3 0 0 1 0 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <svg class="icon-on" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 5h2.5L7 2v10L3.5 9H1z" fill="currentColor"/><path d="M9.5 5l3.5 4M13 5l-3.5 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="video-toggle-label">Sound on</span>
+              </button>
+              <button class="video-toggle video-play" type="button" data-on="false">
+                <svg class="icon-on" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg>
+                <svg class="icon-off" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11a1 1 0 0 0 1.5.86l9-5.5a1 1 0 0 0 0-1.72l-9-5.5A1 1 0 0 0 3 1.5z" fill="currentColor"/></svg>
+                <span class="video-toggle-label">Play video</span>
+              </button>
+            </div>
           </div>
           <p id="showreel-description" class="visually-hidden">
             A short animation from the app. Pip waves hello in a backyard, tries on a bucket hat, sunglasses

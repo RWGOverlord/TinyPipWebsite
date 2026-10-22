@@ -296,10 +296,21 @@ strong {
   background: radial-gradient(closest-side, var(--spotlight), transparent);
 }
 
-.video-toggle {
+.video-controls {
   position: absolute;
+  left: 16px;
   right: 16px;
   bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.video-controls[hidden] {
+  display: none;
+}
+
+.video-toggle {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -321,13 +332,14 @@ strong {
   height: 14px;
 }
 
-.video-toggle .icon-play,
-.video-toggle[aria-pressed="false"] .icon-pause {
+/* Each button carries two icons: one for when it's on (playing, sound on), one for off */
+.video-toggle[data-on="true"] .icon-off,
+.video-toggle[data-on="false"] .icon-on {
   display: none;
 }
 
-.video-toggle[aria-pressed="false"] .icon-play {
-  display: block;
+.video-toggle[data-on="true"].video-sound {
+  background: var(--sun);
 }
 
 /* ─── Features ────────────────────────────────────────────────────────── */

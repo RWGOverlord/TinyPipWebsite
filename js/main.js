@@ -6,18 +6,25 @@
 
   // ─── Showreel ──────────────────────────────────────────────────────────
   // Plays muted and looping, unless the visitor prefers reduced motion.
-  // Either way there's a visible play/pause button.
+  // Visible buttons pause it and turn Pip's theme music on (browsers only
+  // allow sound after a tap).
   var video = document.getElementById("showreel");
-  var toggle = document.querySelector(".video-toggle");
+  var controls = document.querySelector(".video-controls");
 
-  if (video && toggle) {
-    var label = toggle.querySelector(".video-toggle-label");
+  if (video && controls) {
+    var playButton = controls.querySelector(".video-play");
+    var soundButton = controls.querySelector(".video-sound");
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var heardFromStart = false;
+
+    var setButton = function (button, on, text) {
+      button.dataset.on = String(on);
+      button.querySelector(".video-toggle-label").textContent = text;
+    };
 
     var sync = function () {
-      var playing = !video.paused;
-      toggle.setAttribute("aria-pressed", String(playing));
-      label.textContent = playing ? "Pause video" : "Play video";
+      setButton(playButton, !video.paused, video.paused ? "Play video" : "Pause video");
+      setButton(soundButton, !video.muted, video.muted ? "Sound on" : "Sound off");
     };
 
     var play = function () {
@@ -25,13 +32,26 @@
       if (attempt && attempt.catch) attempt.catch(sync);
     };
 
-    toggle.hidden = false;
-    toggle.addEventListener("click", function () {
+    controls.hidden = false;
+    playButton.addEventListener("click", function () {
       if (video.paused) play();
       else video.pause();
     });
+    soundButton.addEventListener("click", function () {
+      video.muted = !video.muted;
+      if (!video.muted) {
+        // The first time, start over so the theme plays from the top
+        if (!heardFromStart) {
+          heardFromStart = true;
+          video.currentTime = 0;
+        }
+        if (video.paused) play();
+      }
+      sync();
+    });
     video.addEventListener("play", sync);
     video.addEventListener("pause", sync);
+    video.addEventListener("volumechange", sync);
 
     if (!reduceMotion.matches) {
       video.preload = "auto";
