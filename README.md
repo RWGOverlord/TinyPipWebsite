@@ -19,10 +19,6 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000.
 
-## To finish
-
-- **Screenshots:** in `index.html`, search for `SCREENSHOTS` and swap each placeholder for a `<picture>`.
-
 ## Turning on GitHub Pages
 
 1. Push `main` to GitHub.
