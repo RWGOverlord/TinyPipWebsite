@@ -22,7 +22,6 @@ Then open http://localhost:8000.
 ## To finish
 
 - **Screenshots:** in `index.html`, search for `SCREENSHOTS` and swap each placeholder for a `<picture>`.
-- **Tagline:** search for `TAGLINE`.
 
 ## Turning on GitHub Pages
 
