@@ -4,6 +4,58 @@
 (function () {
   "use strict";
 
+  // Sends a Google Analytics event (see js/analytics.js). Does nothing if GA
+  // is blocked. Never send the visitor's email address here.
+  var track = function (name, params) {
+    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+  };
+
+  // ─── Analytics: CTA clicks, sections seen, scroll depth ────────────────
+  document.querySelectorAll("[data-cta]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      track("cta_click", { cta_location: link.dataset.cta });
+    });
+  });
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+    link.addEventListener("click", function () {
+      track("contact_click");
+    });
+  });
+
+  if ("IntersectionObserver" in window) {
+    // A section counts as seen once its top passes 60% of the way down the screen
+    var seen = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        track("section_view", { section: entry.target.dataset.section });
+        seen.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -40% 0px" });
+    document.querySelectorAll("[data-section]").forEach(function (section) {
+      seen.observe(section);
+    });
+  }
+
+  var depths = [25, 50, 75, 100];
+  var ticking = false;
+  var checkDepth = function () {
+    ticking = false;
+    var doc = document.documentElement;
+    var percent = ((window.scrollY + window.innerHeight) / doc.scrollHeight) * 100;
+    while (depths.length && percent >= depths[0] - 1) {
+      track("scroll_depth", { percent: depths.shift() });
+    }
+    if (!depths.length) window.removeEventListener("scroll", onScroll);
+  };
+  var onScroll = function () {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(checkDepth);
+    }
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+
   // ─── Showreel ──────────────────────────────────────────────────────────
   // Plays muted and looping, unless the visitor prefers reduced motion.
   // Visible buttons pause it and turn Pip's theme music on (browsers only
@@ -34,12 +86,17 @@
 
     controls.hidden = false;
     playButton.addEventListener("click", function () {
-      if (video.paused) play();
-      else video.pause();
+      if (video.paused) {
+        play();
+      } else {
+        video.pause();
+        track("video_pause");
+      }
     });
     soundButton.addEventListener("click", function () {
       video.muted = !video.muted;
       if (!video.muted) {
+        track("video_sound_on");
         // The first time, start over so the theme plays from the top
         if (!heardFromStart) {
           heardFromStart = true;
@@ -77,15 +134,21 @@
     var friendlyError = function (msg) {
       var text = String(msg || "").replace(/<[^>]*>/g, "").replace(/^\d+\s*-\s*/, "");
       if (/already subscribed/i.test(text)) {
-        return { state: "success", message: "You’re already on the list. Thanks for being here!" };
+        return { state: "success", reason: "already_subscribed", message: "You’re already on the list. Thanks for being here!" };
       }
       if (/too many/i.test(text)) {
-        return { state: "error", message: "That’s a lot of tries in a row. Please wait a few minutes and try again." };
+        return { state: "error", reason: "too_many_tries", message: "That’s a lot of tries in a row. Please wait a few minutes and try again." };
       }
       if (/email/i.test(text)) {
-        return { state: "error", message: "That email address doesn’t look quite right. Could you check it?" };
+        return { state: "error", reason: "invalid_email", message: "That email address doesn’t look quite right. Could you check it?" };
       }
-      return { state: "error", message: "Something went wrong on our side. Please try again in a moment." };
+      return { state: "error", reason: "other", message: "Something went wrong on our side. Please try again in a moment." };
+    };
+
+    // "ios" or "android", from the chosen radio button (never the email)
+    var chosenPlatform = function () {
+      var checked = form.querySelector('input[name="tags"]:checked');
+      return checked ? checked.id.replace("platform-", "") : "unknown";
     };
 
     form.addEventListener("submit", function (event) {
@@ -96,6 +159,7 @@
         return;
       }
 
+      var platform = chosenPlatform();
       var callback = "tinyPipWaitlist" + Date.now();
       var params = new URLSearchParams(new FormData(form));
       params.set("c", callback);
@@ -114,20 +178,24 @@
         done();
         if (data && data.result === "success") {
           form.reset();
+          track("sign_up", { method: "waitlist", platform: platform });
           show("success", "You’re on the list! Check your inbox to confirm your email.");
         } else {
           var result = friendlyError(data && data.msg);
+          track("waitlist_error", { reason: result.reason, platform: platform });
           show(result.state, result.message);
         }
       };
 
       timer = setTimeout(function () {
         done();
+        track("waitlist_error", { reason: "timeout", platform: platform });
         show("error", "We couldn’t reach the waitlist. Please check your connection and try again.");
       }, 12000);
 
       script.onerror = function () {
         done();
+        track("waitlist_error", { reason: "network", platform: platform });
         show("error", "We couldn’t reach the waitlist. Please check your connection and try again.");
       };
 
