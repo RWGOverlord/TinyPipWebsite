@@ -21,7 +21,6 @@ Then open http://localhost:8000.
 
 ## To finish
 
-- **Mailchimp:** in `index.html`, search for `REPLACE` and fill in the form's action URL, the anti-bot field name and the two tag ids. Until then, the form says the waitlist isn't connected yet.
 - **Screenshots:** in `index.html`, search for `SCREENSHOTS` and swap each placeholder for a `<picture>`.
 - **Tagline:** search for `TAGLINE`.
 

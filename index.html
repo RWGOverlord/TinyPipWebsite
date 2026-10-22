@@ -193,12 +193,10 @@
           <p class="section-lede">Be one of the first to meet Pip. We’ll email you when Tiny Pip launches and when early-access spots open up.</p>
           <p class="store-line">Coming soon to Google Play and the App Store</p>
 
-          <!-- MAILCHIMP: paste the values from your embedded form's code:
-               - action: the form's action URL (…list-manage.com/subscribe/post?u=…&id=…&f_id=…)
-               - the hidden anti-bot field's name (b_<u>_<id>)
-               - the two tag ids for iPhone and Android (value="…" on the radios) -->
+          <!-- MAILCHIMP: posts to the TinyPipWaitlist audience. The radios send one tag id each:
+               8830076 = iOS, 8830077 = Android. js/main.js submits it in place via post-json. -->
           <form class="waitlist-form"
-                action="https://REPLACE_ME.us1.list-manage.com/subscribe/post?u=REPLACE_U&amp;id=REPLACE_ID&amp;f_id=REPLACE_F"
+                action="https://emberforgeworks.us10.list-manage.com/subscribe/post?u=6da5a28b85b0419378c97e1d0&amp;id=402e7c5e9e&amp;f_id=000f84e3f0"
                 method="post" target="_blank">
             <div class="form-field">
               <label for="mce-EMAIL">Email address</label>
@@ -210,11 +208,11 @@
               <legend>iPhone or Android?</legend>
               <div class="choices">
                 <div class="choice">
-                  <input type="radio" id="platform-ios" name="tags" value="REPLACE_IOS_TAG_ID" required>
+                  <input type="radio" id="platform-ios" name="tags" value="8830076" required>
                   <label for="platform-ios">iPhone</label>
                 </div>
                 <div class="choice">
-                  <input type="radio" id="platform-android" name="tags" value="REPLACE_ANDROID_TAG_ID">
+                  <input type="radio" id="platform-android" name="tags" value="8830077">
                   <label for="platform-android">Android</label>
                 </div>
               </div>
@@ -222,7 +220,7 @@
 
             <!-- Mailchimp's anti-bot field: real people never see or fill it -->
             <div class="honeypot" aria-hidden="true">
-              <input type="text" name="b_REPLACE_U_REPLACE_ID" tabindex="-1" value="" autocomplete="off">
+              <input type="text" name="b_6da5a28b85b0419378c97e1d0_402e7c5e9e" tabindex="-1" value="" autocomplete="off">
             </div>
 
             <button class="button" type="submit">Join the waitlist</button>
