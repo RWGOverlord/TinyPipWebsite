@@ -17,6 +17,12 @@
     });
   });
 
+  document.querySelectorAll(".faq-item").forEach(function (item) {
+    item.addEventListener("toggle", function () {
+      if (item.open) track("faq_open", { question: item.querySelector("summary").textContent.trim() });
+    });
+  });
+
   document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
     link.addEventListener("click", function () {
       track("contact_click");
