@@ -609,6 +609,52 @@ fieldset {
   list-style: none;
 }
 
+.social-title {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 18px;
+  border: var(--outline) solid var(--ink);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  box-shadow: 0 3px 0 var(--ink);
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.social-links a span {
+  padding: 0 8px;
+  border-radius: var(--radius-pill);
+  background: var(--sun);
+}
+
+.social-links a:hover {
+  background: var(--spotlight);
+}
+
+.social-links a:focus-visible {
+  border-radius: var(--radius-pill);
+}
+
 .footer-links a {
   color: var(--ink);
   font-weight: 800;

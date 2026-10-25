@@ -23,6 +23,12 @@
     });
   });
 
+  document.querySelectorAll("[data-social]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      track("social_click", { network: link.dataset.social });
+    });
+  });
+
   document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
     link.addEventListener("click", function () {
       track("contact_click");
