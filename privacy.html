@@ -43,15 +43,17 @@
          "This website and the waitlist" is site-only. Keep the two in sync when either changes. -->
     <article class="prose">
       <h1>Tiny Pip Privacy Policy</h1>
-      <p class="effective"><strong>Effective October 22, 2026</strong></p>
+      <p class="effective"><strong>Effective October 25, 2026</strong></p>
 
-      <p>Tiny Pip is a small companion app for tasks and habits, published by Emberforge Works, LLC. This policy explains what happens to your information when you use the app, and, <a href="#website-waitlist">at the end</a>, when you visit this website or join its waitlist. The short version for the app: <strong>what you put into Tiny Pip stays on your phone.</strong> The app has no accounts or servers, doesn’t track you, and doesn’t show ads.</p>
+      <p>Tiny Pip is a small companion app for tasks and habits, published by Emberforge Works, LLC. This policy explains what happens to your information when you use the app, and, <a href="#website-waitlist">at the end</a>, when you visit this website or join its waitlist. The short version for the app: <strong>what you put into Tiny Pip stays on your phone.</strong> The app has no accounts, doesn’t track you, and doesn’t show ads. The one exception is a feature you choose to use: when you ask Pip to help break a task into steps, that task’s words are sent to be turned into steps (see “<a href="#ai-help-with-steps-optional">AI help with steps</a>”).</p>
 
-      <h2>What Tiny Pip keeps, and where</h2>
+      <h2 id="what-tiny-pip-keeps-and-where">What Tiny Pip keeps, and where</h2>
       <p>Tiny Pip saves what you enter so it’s there next time you open the app:</p>
       <ul>
         <li>your tasks, their steps and any notes you add;</li>
         <li>your habits and what you’ve logged;</li>
+        <li>how you said you felt in mood check-ins, and the gentle patterns Pip notices from them (“insights”), which are worked out on your phone;</li>
+        <li>what you told Pip about yourself when you started (what you tend to put off, why, where you’d like support and your pace), which you can change in the app, and your weekly look backs (how the week felt, what went well, what to focus on);</li>
         <li>reminders you ask for, and when;</li>
         <li>focus timer sessions;</li>
         <li>the name you give Pip, and your name if you tell Pip;</li>
@@ -59,8 +61,19 @@
       </ul>
       <p>All of this is stored <strong>only on your device</strong>, in the app’s private storage. It is never sent to us or to anyone else. We can’t see it, and we can’t recover it for you.</p>
       <p><strong>Backups.</strong> If your phone backs up apps (to your Google account on Android, or to iCloud on iPhone), Tiny Pip’s data may be included, so it can come back if you reinstall or change phones. That backup is handled by Google or Apple under your account and your phone’s backup settings; it is not sent to us. You can turn it off in your phone’s settings.</p>
+      <p><strong>Saving a copy yourself.</strong> In Settings, <strong>Save my data</strong> puts everything above into one file and opens your phone’s share options, so you can save it wherever you choose (your files, a cloud drive, a message to yourself). <strong>Restore from a backup</strong> loads such a file, on this phone or a new one, after showing you what’s in it. The file goes only where you send it; it is never sent to us. It isn’t encrypted, so anyone who has the file can read it, mood check-ins included: keep it somewhere private.</p>
 
-      <h2>What Tiny Pip doesn’t do</h2>
+      <h2 id="ai-help-with-steps-optional">AI help with steps (optional)</h2>
+      <p>When you add a task, you can tap <strong>“Help me break this down”</strong> to have Pip suggest a few small steps. Only when you tap it:</p>
+      <ul>
+        <li><strong>What’s sent:</strong> just the words of that one task (and your time zone, to know when your week starts). Nothing else: not your other tasks, habits, notes, reminders or names.</li>
+        <li><strong>Where it goes:</strong> to our server, run by Supabase, which passes the words to Anthropic, the company that makes the Claude AI model, to write the suggested steps. The steps come back to your phone, where you can change them before saving.</li>
+        <li><strong>What we keep:</strong> not the task’s words or the steps. Our server keeps only a random ID for your phone (created the first time you use this feature, not linked to your name, email or anything else about you), when you asked, whether it worked, and its size and cost, so we can count the free weekly allowance and keep costs in check.</li>
+        <li><strong>Anthropic</strong> processes the words to create the steps under its commercial terms, which don’t allow them to be used to train its models; it may keep them for a limited time for safety and abuse monitoring. See <a href="https://www.anthropic.com/legal/privacy">Anthropic’s Privacy Policy</a> and <a href="https://supabase.com/privacy">Supabase’s Privacy Policy</a>.</li>
+      </ul>
+      <p>If you never tap “Help me break this down”, nothing in this section happens. Uninstalling Tiny Pip removes the random ID from your phone; to have what our server holds about it deleted, email us.</p>
+
+      <h2 id="what-tiny-pip-doesn-t-do">What Tiny Pip doesn’t do</h2>
       <ul>
         <li>No sign-up or account.</li>
         <li>No analytics, tracking or advertising, and no data sold or shared.</li>
@@ -68,25 +81,28 @@
         <li>No access to anything on your phone outside Tiny Pip.</li>
       </ul>
 
-      <h2>Notifications</h2>
-      <p>If you allow notifications, Tiny Pip schedules them on your phone: reminders you ask for, Pip’s check-ins and the focus timer. They’re created and delivered on your device; nothing is sent to a server to make them work.</p>
+      <h2 id="notifications">Notifications</h2>
+      <p>If you allow notifications, Tiny Pip schedules them on your phone: reminders you ask for, Pip’s check-ins, the focus timer and, if you keep it on, one evening mood check-in reminder. They’re created and delivered on your device; nothing is sent to a server to make them work.</p>
 
-      <h2>Feedback</h2>
+      <h2 id="support-resources">Support resources</h2>
+      <p>If something you type suggests you might be going through a very hard time, or you open “Need support?” in the menu, Tiny Pip shows free, confidential helplines. That check happens on your phone, and nothing about it is sent anywhere. Tapping a helpline opens your phone’s own messages, phone or browser; Tiny Pip doesn’t see what happens there.</p>
+
+      <h2 id="feedback">Feedback</h2>
       <p>The app has a “Send feedback” button. It opens your own email app with a message addressed to us and fills in the app’s version and your phone’s model, which help us fix problems. Nothing is sent unless you send it. If you do, we receive your email address and whatever you write, and we use them only to reply and to improve Tiny Pip. We don’t add you to any mailing list. Ask us any time and we’ll delete your messages.</p>
 
-      <h2>Google Play, the App Store and TestFlight</h2>
+      <h2 id="google-play-the-app-store-and-testflight">Google Play, the App Store and TestFlight</h2>
       <p>Tiny Pip is distributed through Google Play and Apple’s App Store, and test versions through Google Play testing and Apple’s TestFlight. Google and Apple may collect information about installs and app crashes under their own privacy policies and share crash reports with us in summary form; these don’t include what you’ve entered in the app. If you join a test, the store tells us the email address you were invited with, and TestFlight passes along any feedback or screenshots you choose to send. See <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a> and <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
 
-      <h2>Purchases</h2>
+      <h2 id="purchases">Purchases</h2>
       <p>Tiny Pip doesn’t take payments at this time. If paid features are added, purchases will go through Google Play or the App Store, and we’ll update this policy first.</p>
 
-      <h2>Children</h2>
+      <h2 id="children">Children</h2>
       <p>Tiny Pip isn’t directed at children under 13, and we don’t knowingly collect information from them.</p>
 
-      <h2>Deleting your information</h2>
-      <p>Uninstalling Tiny Pip deletes everything it has stored on your phone. To remove it from your phone’s backup too, use your phone’s backup settings. To delete feedback you’ve emailed us, write to the address below.</p>
+      <h2 id="deleting-your-information">Deleting your information</h2>
+      <p>Uninstalling Tiny Pip deletes everything it has stored on your phone. To remove it from your phone’s backup too, use your phone’s backup settings. To delete feedback you’ve emailed us, or what our server holds for the AI helper, write to the address below.</p>
 
-      <h2>Changes</h2>
+      <h2 id="changes">Changes</h2>
       <p>If this policy changes, we’ll update it here and change the date at the top. If a change affects what happens to your information, we’ll say so in the app before it takes effect.</p>
 
       <section class="callout" aria-labelledby="website-waitlist">
@@ -96,8 +112,7 @@
         <p><strong>The waitlist.</strong> If you join the waitlist, we collect your email address and whether you use an iPhone or Android. We use them only to tell you about Tiny Pip’s launch and early access, such as inviting iPhone and Android testers in separate groups. We never sell or share them. The list is kept by Mailchimp, our email service, which handles it for us under <a href="https://www.intuit.com/privacy/statement/">its own privacy policy</a>; Mailchimp may record whether our emails are opened and which links are clicked. Every email has an unsubscribe link, so you can leave the list anytime. To have your details deleted completely, email us at the address below.</p>
         <p><strong>Hosting.</strong> The site is hosted on GitHub Pages. Like most web hosts, GitHub may log visitors’ IP addresses to keep the service secure and running, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Apart from GitHub and Google Analytics, the site loads nothing from other companies until you join the waitlist, which sends your details to Mailchimp.</p>
       </section>
-
-      <h2>Contact</h2>
+      <h2 id="contact">Contact</h2>
       <p>Questions about privacy, or anything else: <a href="mailto:feedback@heytinypip.com"><strong>feedback@heytinypip.com</strong></a></p>
     </article>
   </main>
