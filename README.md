@@ -10,6 +10,7 @@ The landing page and privacy policy for [Tiny Pip](https://heytinypip.com). Plai
 - `js/main.js`: showreel play/pause, the Mailchimp waitlist form, and the footer year.
 - `assets/`: self-hosted fonts (Fredoka, Nunito; OFL), images and the showreel loop. Every image is cut from the app's real art (the icon and the showreel); nothing is redrawn.
 - `CNAME`: the custom domain, `heytinypip.com`.
+- `sitemap.xml` and `robots.txt`: for search engines. When you add a page, add it to the sitemap and update the `lastmod` dates of pages you change.
 
 ## Preview locally
 
