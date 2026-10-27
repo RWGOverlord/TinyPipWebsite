@@ -1,4 +1,4 @@
-// Tiny Pip site: the showreel's play/pause, the waitlist form, the footer year.
+// Tiny Pip site: the showreel's play/pause, the beta sign-up form, the footer year.
 // The page works without this file: the form falls back to Mailchimp's own page.
 
 (function () {
@@ -129,7 +129,7 @@
     sync();
   }
 
-  // ─── Waitlist ──────────────────────────────────────────────────────────
+  // ─── Beta sign-up ──────────────────────────────────────────────────────
   // Sends the form to Mailchimp's JSON endpoint so visitors stay on the page.
   var form = document.querySelector(".waitlist-form");
 
@@ -146,7 +146,7 @@
     var friendlyError = function (msg) {
       var text = String(msg || "").replace(/<[^>]*>/g, "").replace(/^\d+\s*-\s*/, "");
       if (/already subscribed/i.test(text)) {
-        return { state: "success", reason: "already_subscribed", message: "You’re already on the list. Thanks for being here!" };
+        return { state: "success", reason: "already_subscribed", message: "You’re already signed up! We’ll email your invite when a spot opens." };
       }
       if (/too many/i.test(text)) {
         return { state: "error", reason: "too_many_tries", message: "That’s a lot of tries in a row. Please wait a few minutes and try again." };
@@ -167,7 +167,7 @@
       event.preventDefault();
 
       if (notConnected) {
-        show("error", "The waitlist isn’t connected yet. Please check back soon!");
+        show("error", "Sign-ups aren’t connected yet. Please check back soon!");
         return;
       }
 
@@ -190,8 +190,8 @@
         done();
         if (data && data.result === "success") {
           form.reset();
-          track("sign_up", { method: "waitlist", platform: platform });
-          show("success", "You’re on the list! Check your inbox to confirm your email.");
+          track("sign_up", { method: "closed_beta", platform: platform });
+          show("success", "You’re on the list! Check your inbox to confirm your email, and we’ll send your beta invite when a spot opens.");
         } else {
           var result = friendlyError(data && data.msg);
           track("waitlist_error", { reason: result.reason, platform: platform });
@@ -202,13 +202,13 @@
       timer = setTimeout(function () {
         done();
         track("waitlist_error", { reason: "timeout", platform: platform });
-        show("error", "We couldn’t reach the waitlist. Please check your connection and try again.");
+        show("error", "We couldn’t reach the sign-up list. Please check your connection and try again.");
       }, 12000);
 
       script.onerror = function () {
         done();
         track("waitlist_error", { reason: "network", platform: platform });
-        show("error", "We couldn’t reach the waitlist. Please check your connection and try again.");
+        show("error", "We couldn’t reach the sign-up list. Please check your connection and try again.");
       };
 
       submit.disabled = true;
