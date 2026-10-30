@@ -30,6 +30,52 @@
   <meta name="twitter:image" content="https://heytinypip.com/assets/img/og-image.jpg">
   <meta name="twitter:image:alt" content="The Tiny Pip app icon and Pip, a small green companion, wearing a bike helmet, sunglasses and a scarf.">
 
+  <!-- Structured data: tells search engines and AI assistants what Tiny Pip is and who makes it -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://heytinypip.com/#publisher",
+        "name": "Emberforge Works, LLC",
+        "url": "https://heytinypip.com/",
+        "email": "feedback@heytinypip.com"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://heytinypip.com/#website",
+        "name": "Tiny Pip",
+        "alternateName": "Hey Tiny Pip",
+        "url": "https://heytinypip.com/",
+        "publisher": { "@id": "https://heytinypip.com/#publisher" }
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://heytinypip.com/#app",
+        "name": "Tiny Pip",
+        "alternateName": "Hey Tiny Pip",
+        "description": "Tiny Pip is a small companion app that helps with procrastination and the things you put off. Pip helps you pick one thing, start it with a tiny first step, and log your real progress, which sends Pip on adventures to find items and pets. No streaks to lose, no account, and what you put in stays on your phone.",
+        "url": "https://heytinypip.com/",
+        "image": "https://heytinypip.com/assets/img/icon-256.png",
+        "screenshot": [
+          "https://heytinypip.com/assets/img/shot-corner.jpg",
+          "https://heytinypip.com/assets/img/shot-adventure.jpg",
+          "https://heytinypip.com/assets/img/shot-find.jpg"
+        ],
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "LifestyleApplication",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "publisher": { "@id": "https://heytinypip.com/#publisher" },
+        "sameAs": [
+          "https://www.tiktok.com/@heytinypip",
+          "https://www.instagram.com/heytinypip/"
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="preload" href="assets/fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
@@ -274,7 +320,7 @@
         <div class="faq">
           <details class="faq-item">
             <summary>What is Tiny Pip?</summary>
-            <p>Tiny Pip is a small companion app for the things you put off: everyday tasks, habits and bigger responsibilities. Pip helps you pick one thing, start it with a tiny first step, and log your real progress. That progress sends Pip on adventures to find items and pets.</p>
+            <p>Tiny Pip is a small companion app that helps with procrastination: the everyday tasks, habits and bigger responsibilities you keep putting off. Pip helps you pick one thing, start it with a tiny first step, and log your real progress. That progress sends Pip on adventures to find items and pets.</p>
           </details>
           <details class="faq-item">
             <summary>When is Tiny Pip coming out?</summary>
@@ -299,6 +345,10 @@
           <details class="faq-item">
             <summary>Can I use it for work tasks?</summary>
             <p>Yes. Personal or work, big or small: anything you’ve been putting off. Bigger tasks can be split into steps, and Pip remembers where you left off.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is Tiny Pip for people with ADHD?</summary>
+            <p>Tiny Pip is for anyone who knows exactly what to do and still can’t start it. A lot of people with ADHD know that feeling well, and Pip was made for that moment: one thing, one tiny first step, and no guilt if you stop. It isn’t a treatment for ADHD or anything else, just a little help getting started.</p>
           </details>
           <details class="faq-item">
             <summary>Does the game reward screen time?</summary>
