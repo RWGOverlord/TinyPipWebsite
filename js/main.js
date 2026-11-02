@@ -146,7 +146,7 @@
     var friendlyError = function (msg) {
       var text = String(msg || "").replace(/<[^>]*>/g, "").replace(/^\d+\s*-\s*/, "");
       if (/already subscribed/i.test(text)) {
-        return { state: "success", reason: "already_subscribed", message: "You’re already signed up! We’ll email your invite when a spot opens." };
+        return { state: "success", reason: "already_subscribed", message: "You’re already signed up! Watch your email for your invite." };
       }
       if (/too many/i.test(text)) {
         return { state: "error", reason: "too_many_tries", message: "That’s a lot of tries in a row. Please wait a few minutes and try again." };
@@ -162,6 +162,43 @@
       var checked = form.querySelector('input[name="tags"]:checked');
       return checked ? checked.id.replace("platform-", "") : "unknown";
     };
+
+    // Show only the chosen phone's email hints. Android needs the Google Play
+    // account's email, so the label says so. Before a choice, no hints show.
+    var emailLabel = form.querySelector("#email-label");
+    var emailInput = form.querySelector("#mce-EMAIL");
+    var platformHints = form.querySelectorAll("[data-platform]");
+    var showPlatformHints = function () {
+      var platform = chosenPlatform();
+      var ids = [];
+      platformHints.forEach(function (hint) {
+        hint.hidden = hint.dataset.platform !== platform;
+        if (!hint.hidden) ids.push(hint.id);
+      });
+      emailLabel.textContent = platform === "android" ? "Your Google Play email" : "Your email";
+      if (ids.length) {
+        emailInput.setAttribute("aria-describedby", ids.join(" "));
+      } else {
+        emailInput.removeAttribute("aria-describedby");
+      }
+    };
+    form.querySelectorAll('input[name="tags"]').forEach(function (radio) {
+      radio.addEventListener("change", showPlatformHints);
+    });
+    showPlatformHints();
+
+    // Which social link brought the visitor here, e.g. ?utm_source=tiktok. Kept
+    // for the visit, so it survives a trip to the privacy page and back.
+    var sourceInput = form.querySelector('input[name="SOURCE"]');
+    var source = "";
+    try {
+      source = new URLSearchParams(window.location.search).get("utm_source") || sessionStorage.getItem("tinyPipSource") || "";
+      source = source.toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 50);
+      if (source) sessionStorage.setItem("tinyPipSource", source);
+    } catch (e) {
+      // sessionStorage can be blocked; the address bar is enough then
+    }
+    if (sourceInput) sourceInput.value = source;
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -190,8 +227,9 @@
         done();
         if (data && data.result === "success") {
           form.reset();
+          showPlatformHints();
           track("sign_up", { method: "closed_beta", platform: platform });
-          show("success", "You’re on the list! Check your inbox to confirm your email, and we’ll send your beta invite when a spot opens.");
+          show("success", "You’re on the list! Check your inbox to confirm your email. Invites go out in batches, starting soon, so keep an eye out.");
         } else {
           var result = friendlyError(data && data.msg);
           track("waitlist_error", { reason: result.reason, platform: platform });
