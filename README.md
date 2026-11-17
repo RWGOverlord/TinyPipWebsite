@@ -4,10 +4,10 @@ The landing page and privacy policy for [Tiny Pip](https://heytinypip.com). Plai
 
 ## Files
 
-- `index.html`: the landing page (hero, features, screenshots, waitlist).
-- `privacy.html`: the privacy policy. It mirrors the app's `docs/privacy-policy.md` in the TinyPip repo and adds a section for the website and waitlist.
+- `index.html`: the landing page (hero, features, screenshots, joining the beta, questions).
+- `privacy.html`: the privacy policy. It mirrors the app's `docs/privacy-policy.md` in the TinyPip repo and adds a section for the website.
 - `css/style.css`: all styles. Colors and shapes follow the app's "meadow" theme.
-- `js/main.js`: showreel play/pause, the Mailchimp waitlist form, and the footer year.
+- `js/main.js`: analytics events, showreel play/pause, and the footer year.
 - `assets/`: self-hosted fonts (Fredoka, Nunito; OFL), images and the showreel loop. Every image is cut from the app's real art (the icon and the showreel); nothing is redrawn.
 - `CNAME`: the custom domain, `heytinypip.com`.
 - `sitemap.xml` and `robots.txt`: for search engines. When you add a page, add it to the sitemap and update the `lastmod` dates of pages you change.

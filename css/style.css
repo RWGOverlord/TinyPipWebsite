@@ -429,7 +429,7 @@ strong {
   font-size: 1.1rem;
 }
 
-/* ─── Waitlist ────────────────────────────────────────────────────────── */
+/* ─── Join the beta ───────────────────────────────────────────────────── */
 
 .waitlist-card {
   max-width: 560px;
@@ -473,159 +473,49 @@ strong {
   margin-top: 6px;
 }
 
-.form-field {
-  margin-bottom: 20px;
-}
-
-.check {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.check input {
-  flex: none;
-  width: 22px;
-  height: 22px;
-  margin: 1px 0 0;
-  accent-color: var(--ink);
-  cursor: pointer;
-}
-
-.check label {
-  cursor: pointer;
-}
-
-.form-field > label,
-.form-field legend {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 800;
-}
-
-fieldset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  min-width: 0;
-}
-
-.input {
-  width: 100%;
-  min-height: 52px;
-  padding: 12px 18px;
-  border: var(--outline) solid var(--ink);
-  border-radius: var(--radius-md);
-  background: var(--surface);
-  color: var(--ink);
-  font: inherit;
-  font-size: 1.0625rem;
-}
-
-.input::placeholder {
-  color: var(--text-muted);
-  opacity: 1;
-}
-
-.input:focus-visible {
-  border-radius: var(--radius-md);
-  outline-offset: 2px;
-}
-
-.choices {
+.beta-platforms {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
-.choice {
-  position: relative;
-}
-
-.choice input {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-}
-
-.choice label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 52px;
-  padding: 10px 14px;
+.beta-platform {
+  padding: 18px 20px;
   border: var(--outline) solid var(--ink);
   border-radius: var(--radius-md);
   background: var(--surface);
-  box-shadow: 0 3px 0 var(--ink);
-  font-weight: 800;
-  cursor: pointer;
-  transition: background-color 0.12s ease;
 }
 
-.choice label::before {
-  content: "";
-  flex: none;
-  width: 18px;
-  height: 18px;
-  border: var(--outline) solid var(--ink);
-  border-radius: 50%;
-  background: var(--surface);
+.beta-platform h3 {
+  margin-bottom: 12px;
 }
 
-.choice input:checked + label {
-  background: var(--sun);
+.beta-platform .button {
+  width: 100%;
+  margin: 10px 0 14px;
 }
 
-.choice input:checked + label::before {
-  background: var(--ink);
-  box-shadow: inset 0 0 0 3px var(--surface);
+.beta-steps {
+  margin: 0 0 12px;
+  padding-left: 22px;
 }
 
-.choice input:focus-visible + label {
-  outline: 3px solid var(--ink);
-  outline-offset: 3px;
+.beta-steps li + li {
+  margin-top: 10px;
+}
+
+.beta-steps .button {
+  margin-bottom: 4px;
+}
+
+.beta-rewards p {
+  margin: 0;
 }
 
 .form-hint {
   margin: -4px 0 10px;
   color: var(--text-muted);
   font-size: 0.9rem;
-}
-
-.honeypot {
-  position: absolute;
-  left: -5000px;
-}
-
-.waitlist-form .button {
-  width: 100%;
-  margin-top: 4px;
-}
-
-.form-status {
-  margin-top: 16px;
-  text-align: center;
-  font-weight: 800;
-}
-
-.form-status:empty {
-  display: none;
-}
-
-.form-status[data-state="success"],
-.form-status[data-state="error"] {
-  padding: 12px 16px;
-  border: var(--outline) solid var(--ink);
-  border-radius: var(--radius-md);
-  background: var(--surface);
-}
-
-.form-status[data-state="error"] {
-  border-color: #b3261e;
-  color: #8c1d18;
 }
 
 .form-note {

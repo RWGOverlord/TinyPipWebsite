@@ -83,7 +83,7 @@
   <script src="js/main.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#waitlist">Skip to the beta sign-up</a>
+  <a class="skip-link" href="#waitlist">Skip to joining the beta</a>
 
   <main>
     <!-- ─── Hero ─────────────────────────────────────────────── -->
@@ -281,77 +281,42 @@
       </div>
     </section>
 
-    <!-- ─── Beta sign-up ──────────────────────────────── -->
+    <!-- ─── Join the beta ─────────────────────────────── -->
     <section class="section" id="waitlist" aria-labelledby="waitlist-title" tabindex="-1" data-section="waitlist">
       <div class="wrap">
         <div class="waitlist-card">
           <h2 class="section-title" id="waitlist-title">Join the beta</h2>
-          <p class="section-lede">Tiny Pip’s closed beta is on iPhone, through TestFlight, and on Android, through a Google Play closed test. Invites go out in batches, starting soon. Try Pip early and help shape what Pip does next, right from inside the app.</p>
+          <p class="section-lede">Try Pip early on iPhone, through TestFlight, or on Android, through a Google Play test, and help shape what Pip does next, right from inside the app.</p>
           <p class="store-line">Coming soon to Google Play and the App Store</p>
 
-          <div class="beta-rewards">
-            <h3>A thank-you at launch</h3>
-            <p>Testers who play during the beta get:</p>
-            <ul>
-              <li><strong>3 months of Plus, free.</strong> No card and nothing to cancel. We give it to you ourselves, not through the App Store or Google Play.</li>
-              <li><strong>Founder’s gear</strong> that nobody can get later.</li>
-            </ul>
+          <!-- PUBLIC LINKS: replace the two REPLACE_ placeholders before this goes live.
+               The Play opt-in and store links follow the app's package, com.emberforgeworks.tinypip. -->
+          <div class="beta-platforms">
+            <div class="beta-platform">
+              <h3>iPhone</h3>
+              <a class="button" href="REPLACE_TESTFLIGHT_PUBLIC_LINK" rel="noopener" data-cta="beta_ios_testflight">Join on TestFlight</a>
+              <p class="form-hint">You’ll need Apple’s free TestFlight app.</p>
+            </div>
+
+            <div class="beta-platform">
+              <h3>Android</h3>
+              <ol class="beta-steps">
+                <li>Join the Google Group <a href="REPLACE_GOOGLE_GROUP_LINK" rel="noopener" data-cta="beta_android_group">Tiny Pip Closed Beta</a>, with the Google account you use on Google Play.</li>
+                <li>
+                  Opt in on Google Play:
+                  <a class="button" href="https://play.google.com/apps/testing/com.emberforgeworks.tinypip" rel="noopener" data-cta="beta_android_optin">Become a tester</a>
+                </li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.emberforgeworks.tinypip" rel="noopener" data-cta="beta_android_install">Install Tiny Pip from Google Play</a>.</li>
+              </ol>
+              <p class="form-hint">Please keep the beta installed for at least two weeks.</p>
+            </div>
           </div>
 
-          <!-- MAILCHIMP: posts to the TinyPipWaitlist audience. The radios send one tag id each:
-               8830076 = iOS, 8830077 = Android. SOURCE is a text audience field that js/main.js fills
-               from ?utm_source=. gdpr[52969] is the "Beta emails" marketing permission.
-               js/main.js submits it in place via post-json. -->
-          <form class="waitlist-form"
-                action="https://emberforgeworks.us10.list-manage.com/subscribe/post?u=6da5a28b85b0419378c97e1d0&amp;id=402e7c5e9e&amp;f_id=000f84e3f0"
-                method="post" target="_blank">
-            <fieldset class="form-field" aria-describedby="platform-hint">
-              <legend>iPhone or Android?</legend>
-              <p class="form-hint" id="platform-hint">So we send you the right invite.</p>
-              <div class="choices">
-                <div class="choice">
-                  <input type="radio" id="platform-ios" name="tags" value="8830076" required>
-                  <label for="platform-ios">iPhone</label>
-                </div>
-                <div class="choice">
-                  <input type="radio" id="platform-android" name="tags" value="8830077">
-                  <label for="platform-android">Android</label>
-                </div>
-              </div>
-            </fieldset>
+          <div class="beta-rewards">
+            <p>Then open Tiny Pip and tap <strong>Join the beta</strong> to get your tester rewards at launch: 3 months of Plus and the Founder’s Workshop gear, after playing on 5 different days.</p>
+          </div>
 
-            <!-- js/main.js shows only the chosen phone's hints and swaps the label -->
-            <div class="form-field">
-              <label for="mce-EMAIL" id="email-label">Your email</label>
-              <p class="form-hint" id="email-hint-ios" data-platform="ios"><strong>iPhone:</strong> TestFlight sends your invite here. You’ll need Apple’s free TestFlight app.</p>
-              <p class="form-hint" id="email-hint-android" data-platform="android"><strong>Android:</strong> use the email of your Google Play account. Google Play only lets that account install the beta. We’ll also email you Google Play’s opt-in link, since Google doesn’t send invites itself. Once you’re in, please keep the beta installed and opted in for at least two weeks.</p>
-              <input class="input" type="email" id="mce-EMAIL" name="EMAIL" required
-                     autocomplete="email" inputmode="email" placeholder="you@example.com"
-                     aria-describedby="email-hint-ios email-hint-android">
-            </div>
-
-            <div class="form-field">
-              <div class="check">
-                <input type="checkbox" id="gdpr_52969" name="gdpr[52969]" value="Y" required>
-                <label for="gdpr_52969">Yes, email me about the beta: my invite, my tester code and updates.</label>
-              </div>
-            </div>
-
-            <p class="form-hint">We’ll email you a personal tester code. Enter it in the app’s Settings to link your beta account, so your rewards can be given at launch.</p>
-
-            <!-- Which social link brought them here (utm_source), filled in by js/main.js -->
-            <input type="hidden" name="SOURCE" value="">
-
-            <!-- Mailchimp's anti-bot field: real people never see or fill it -->
-            <div class="honeypot" aria-hidden="true">
-              <input type="text" name="b_6da5a28b85b0419378c97e1d0_402e7c5e9e" tabindex="-1" value="" autocomplete="off">
-            </div>
-
-            <button class="button" type="submit">Join the beta</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
-
-          <p class="form-note">We’ll only email you about the beta and Tiny Pip’s launch. Unsubscribe anytime. See our <a href="privacy.html">privacy policy</a>.</p>
+          <p class="form-note">The beta is free, and you can leave anytime. What happens to the email you give when you join: see our <a href="privacy.html#tester-codes">privacy policy</a>.</p>
         </div>
       </div>
     </section>
@@ -366,31 +331,31 @@
           </details>
           <details class="faq-item">
             <summary>When is Tiny Pip coming out?</summary>
-            <p>Tiny Pip is in a small beta now, and invites for more testers go out in batches, starting soon. <a href="#waitlist">Join the beta</a> and we’ll email you your invite, and again when Tiny Pip launches on the App Store and Google Play.</p>
+            <p>Tiny Pip is in beta now, on iPhone and Android. <a href="#waitlist">Join the beta</a> to try it today. When you join in the app, we’ll email you when Tiny Pip launches on the App Store and Google Play.</p>
           </details>
           <details class="faq-item">
             <summary>Is it on iPhone and Android?</summary>
-            <p>Yes. Tiny Pip is coming to both the App Store and Google Play. When you sign up for the beta, tell us which phone you use so we can send you the right invite.</p>
+            <p>Yes. Tiny Pip is coming to both the App Store and Google Play, and the <a href="#waitlist">beta</a> is on both.</p>
           </details>
           <details class="faq-item">
             <summary>How does the beta work?</summary>
-            <p>Sign up with your email and choose iPhone or Android. On iPhone, you’ll test through Apple’s TestFlight app, and on Android, through a Google Play closed test. We’ll also email you a personal tester code: enter it in the app’s Settings to link your beta account. The beta is free, you can leave anytime, and you can send feedback from inside the app to help shape what Pip does next.</p>
+            <p>On iPhone, you test through Apple’s TestFlight app. On Android, you join our Google Group, become a tester on Google Play, then install from Google Play. Then open Tiny Pip and tap <strong>Join the beta</strong>: it asks for your email and links your tester rewards to the app, so there’s no code to type. The beta is free, you can leave anytime, and you can send feedback from inside the app to help shape what Pip does next.</p>
           </details>
           <details class="faq-item">
-            <summary>When does the beta start?</summary>
-            <p>Soon, in batches. Watch your email for your invite.</p>
+            <summary>Can I join the beta now?</summary>
+            <p>Yes. Use the <a href="#waitlist">buttons above</a> and you can start right away. There’s no invite to wait for.</p>
           </details>
           <details class="faq-item">
             <summary>What do I need for the beta?</summary>
-            <p>An iPhone with Apple’s free TestFlight app, or an Android phone with the Google Play account you signed up with.</p>
+            <p>An iPhone with Apple’s free TestFlight app, or an Android phone with Google Play.</p>
           </details>
           <details class="faq-item">
             <summary>What do beta testers get?</summary>
-            <p>Testers who play during the beta get two thank-yous at launch: 3 months of Plus, free (no card and nothing to cancel; we give it to you ourselves, not through the App Store or Google Play), and founder’s gear that nobody can get later. Your tester code links your beta account so we can give you these at launch, and if you reinstall, entering your code again brings them back.</p>
+            <p>Testers who join the beta in the app and play on 5 different days get two thank-yous at launch: 3 months of Plus, free (no card and nothing to cancel; we give it to you ourselves, not through the App Store or Google Play), and the Founder’s Workshop gear, which nobody can get later. If you reinstall or change phones, join again with the same email and they come back.</p>
           </details>
           <details class="faq-item">
-            <summary>What happens to my beta sign-up details?</summary>
-            <p>Our <a href="privacy.html#website-waitlist">privacy policy</a> explains what we collect when you sign up and how it’s used.</p>
+            <summary>What happens to the email I give when I join?</summary>
+            <p>We keep it with your tester code and use it only to give you your tester rewards and to tell you when Tiny Pip launches. It’s never sold or shared, and we delete it within 90 days after launch. Our <a href="privacy.html#tester-codes">privacy policy</a> has the details.</p>
           </details>
           <details class="faq-item">
             <summary>Is Tiny Pip free?</summary>
@@ -414,7 +379,7 @@
           </details>
           <details class="faq-item">
             <summary>Is my information private?</summary>
-            <p>Yes. The app has no account, and what you put into Tiny Pip stays on your phone, mood check-ins included. There are two optional exceptions. If you tap “Help me break this down,” just that one task’s words are sent to be turned into steps, and we don’t keep them. And the optional tester code links the app’s random ID to the email we sent the code to, until tester rewards are given. Your beta stats are never linked to your email. A tester code is linked to your email only so we can give tester rewards. See our <a href="privacy.html">privacy policy</a> for the details.</p>
+            <p>Yes. The app has no account, and what you put into Tiny Pip stays on your phone, mood check-ins included. There are two optional exceptions. If you tap “Help me break this down,” just that one task’s words are sent to be turned into steps, and we don’t keep them. And if you join the beta, the app’s random ID is linked to the email you give, only so we can give you your tester rewards. Your beta stats are never linked to your email. See our <a href="privacy.html">privacy policy</a> for the details.</p>
           </details>
           <details class="faq-item">
             <summary>Is Tiny Pip a mental health app?</summary>
