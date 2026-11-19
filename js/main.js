@@ -69,7 +69,8 @@
   window.addEventListener("scroll", onScroll, { passive: true });
 
   // ─── Showreel ──────────────────────────────────────────────────────────
-  // Plays muted and looping, unless the visitor prefers reduced motion.
+  // Plays muted and looping once it's near the screen, unless the visitor
+  // prefers reduced motion.
   // Visible buttons pause it and turn Pip's theme music on (browsers only
   // allow sound after a tap).
   var video = document.getElementById("showreel");
@@ -122,9 +123,22 @@
     video.addEventListener("pause", sync);
     video.addEventListener("volumechange", sync);
 
+    // The showreel sits below the fold: load and start it only when it's
+    // about to scroll into view, so visitors who never get there don't
+    // download it.
     if (!reduceMotion.matches) {
-      video.preload = "auto";
-      play();
+      if ("IntersectionObserver" in window) {
+        var nearby = new IntersectionObserver(function (entries) {
+          if (!entries[0].isIntersecting) return;
+          nearby.disconnect();
+          video.preload = "auto";
+          if (video.paused) play();
+        }, { rootMargin: "0px 0px 200px 0px" });
+        nearby.observe(video);
+      } else {
+        video.preload = "auto";
+        play();
+      }
     }
     sync();
   }

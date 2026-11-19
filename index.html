@@ -80,6 +80,16 @@
   <link rel="preload" href="assets/fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Which phone is this? Set before the page draws, so the hero shows only that phone's button.
+       data-inapp marks TikTok's in-app browser, where Google sign-in (the Android beta's first step) can fail. -->
+  <script>
+    (function (d, n) {
+      var ua = n.userAgent;
+      var ios = /iPhone|iPad|iPod/.test(ua) || (n.platform === "MacIntel" && n.maxTouchPoints > 1);
+      d.dataset.os = ios ? "ios" : /Android/.test(ua) ? "android" : "other";
+      if (/musical_ly|Bytedance|TikTok/i.test(ua)) d.dataset.inapp = "tiktok";
+    })(document.documentElement, navigator);
+  </script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -89,48 +99,40 @@
     <!-- ─── Hero ─────────────────────────────────────────────── -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <div class="app-icon">
-            <picture>
-              <source srcset="assets/img/icon-256.webp" type="image/webp">
-              <img src="assets/img/icon-256.png" width="96" height="96" alt="The Tiny Pip app icon: Pip, a small green companion with rosy cheeks, smiling on a sunny yellow background.">
-            </picture>
-          </div>
-          <h1 id="hero-title">Tiny Pip</h1>
-          <p class="tagline">You don’t have to do it all.<br>Pip’s here to help start the first step.</p>
-          <a class="button" href="#waitlist" data-cta="hero">Join the beta</a>
-          <p class="coming-soon">In beta now. Coming soon to Google Play and the App Store.</p>
+        <div class="hero-brand">
+          <picture>
+            <source srcset="assets/img/icon-256.webp" type="image/webp">
+            <img src="assets/img/icon-256.png" width="44" height="44" alt="">
+          </picture>
+          <span>Tiny Pip</span>
         </div>
 
-        <div class="hero-media">
-          <div class="phone">
-            <div class="phone-screen">
-              <video id="showreel" muted loop playsinline preload="metadata"
-                     poster="assets/img/showreel-poster.jpg"
-                     width="540" height="960"
-                     aria-describedby="showreel-description">
-                <source src="assets/video/showreel-loop.mp4" type="video/mp4">
-              </video>
+        <div class="hero-art">
+          <picture>
+            <source srcset="assets/img/card-start.webp" type="image/webp">
+            <img src="assets/img/card-start.jpg" width="720" height="540" fetchpriority="high"
+                 alt="Pip, a small green companion with rosy cheeks, smiling and waving hello in a sunny backyard.">
+          </picture>
+        </div>
+
+        <div class="hero-copy">
+          <h1 id="hero-title">It’s not laziness. <span>You just don’t know where to start.</span></h1>
+          <p class="hero-sub">Tiny Pip is a cozy companion app that turns the thing you keep putting off into one tiny first step. Your real progress sends Pip on adventures.</p>
+
+          <!-- Both buttons show by default; the script in <head> sets data-os so phones see only theirs -->
+          <div class="hero-ctas">
+            <div class="hero-cta hero-cta--ios">
+              <a class="button" href="https://testflight.apple.com/join/zn4xnr6C" rel="noopener" data-cta="hero_ios">Get it free on iPhone</a>
+              <p class="hero-hint">Opens TestFlight, Apple’s free app for betas.</p>
             </div>
-            <div class="video-controls" hidden>
-              <button class="video-toggle video-sound" type="button" data-on="false">
-                <svg class="icon-off" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 5h2.5L7 2v10L3.5 9H1z" fill="currentColor"/><path d="M9.5 4.5a3.5 3.5 0 0 1 0 5M11.5 2.5a6.3 6.3 0 0 1 0 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-                <svg class="icon-on" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 5h2.5L7 2v10L3.5 9H1z" fill="currentColor"/><path d="M9.5 5l3.5 4M13 5l-3.5 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-                <span class="video-toggle-label">Sound on</span>
-              </button>
-              <button class="video-toggle video-play" type="button" data-on="false">
-                <svg class="icon-on" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg>
-                <svg class="icon-off" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11a1 1 0 0 0 1.5.86l9-5.5a1 1 0 0 0 0-1.72l-9-5.5A1 1 0 0 0 3 1.5z" fill="currentColor"/></svg>
-                <span class="video-toggle-label">Play video</span>
-              </button>
+            <div class="hero-cta hero-cta--android">
+              <a class="button" href="#beta-android" data-cta="hero_android">Get it free on Android</a>
+              <p class="hero-hint">A quick sign-up through Google Play.</p>
             </div>
           </div>
-          <p id="showreel-description" class="visually-hidden">
-            A short animation from the app. Pip waves hello in a backyard, tries on a bucket hat, sunglasses
-            and a sunflower costume, then heads off on adventures through a forest, snowy mountains and a castle.
-            Pip's different looks gather together, and the clip ends with Pip asking,
-            “Hi! What’s one thing you want to start?”
-          </p>
+          <p class="hero-fine">Free beta, on iPhone and Android today. No account, no streaks.</p>
+          <p class="hero-switch hero-switch--ios"><a href="#beta-android" data-cta="hero_switch_android">On Android instead?</a></p>
+          <p class="hero-switch hero-switch--android"><a href="https://testflight.apple.com/join/zn4xnr6C" rel="noopener" data-cta="hero_switch_ios">On iPhone instead?</a></p>
         </div>
       </div>
     </section>
@@ -209,6 +211,38 @@
             </div>
           </li>
         </ul>
+
+        <div class="showreel">
+          <div class="phone">
+            <div class="phone-screen">
+              <video id="showreel" muted loop playsinline preload="none"
+                     poster="assets/img/showreel-poster.jpg"
+                     width="540" height="960"
+                     aria-describedby="showreel-description">
+                <source src="assets/video/showreel-loop.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-controls" hidden>
+              <button class="video-toggle video-sound" type="button" data-on="false">
+                <svg class="icon-off" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 5h2.5L7 2v10L3.5 9H1z" fill="currentColor"/><path d="M9.5 4.5a3.5 3.5 0 0 1 0 5M11.5 2.5a6.3 6.3 0 0 1 0 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <svg class="icon-on" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 5h2.5L7 2v10L3.5 9H1z" fill="currentColor"/><path d="M9.5 5l3.5 4M13 5l-3.5 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="video-toggle-label">Sound on</span>
+              </button>
+              <button class="video-toggle video-play" type="button" data-on="false">
+                <svg class="icon-on" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg>
+                <svg class="icon-off" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11a1 1 0 0 0 1.5.86l9-5.5a1 1 0 0 0 0-1.72l-9-5.5A1 1 0 0 0 3 1.5z" fill="currentColor"/></svg>
+                <span class="video-toggle-label">Play video</span>
+              </button>
+            </div>
+          </div>
+          <p id="showreel-description" class="visually-hidden">
+            A short animation from the app. Pip waves hello in a backyard, tries on a bucket hat, sunglasses
+            and a sunflower costume, then heads off on adventures through a forest, snowy mountains and a castle.
+            Pip's different looks gather together, and the clip ends with Pip asking,
+            “Hi! What’s one thing you want to start?”
+          </p>
+          <p class="showreel-caption">Pip dresses up, then heads off exploring.</p>
+        </div>
 
         <p class="promise">Tiny Pip never rewards screen time. Pip only earns from what you actually do, so real life always comes first.</p>
       </div>
@@ -298,8 +332,9 @@
               <p class="form-hint">You’ll need Apple’s free TestFlight app.</p>
             </div>
 
-            <div class="beta-platform">
+            <div class="beta-platform" id="beta-android" tabindex="-1">
               <h3>Android</h3>
+              <p class="inapp-tip">Opened this from TikTok? Tap <strong>⋯</strong> at the top and choose <strong>Open in browser</strong> first, so Google can sign you in.</p>
               <ol class="beta-steps">
                 <li>
                   Join our Google Group, with the Google account you use on Google Play:
