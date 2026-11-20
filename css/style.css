@@ -1976,3 +1976,7 @@ strong {
   text-decoration: underline;
   text-decoration-color: var(--pop);
 }
+
+.cta-card .hero-switch {
+  margin: 0 0 10px;
+}
