@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Analytics: setup and consent defaults in js/analytics.js -->
+  <script src="/js/analytics.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVT7NBYHYV"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Tiny Pip Blog: Starting Tasks, Gently | Tiny Pip</title>
+  <meta name="description" content="Practical, kind articles about procrastination, task paralysis and getting started when a task feels too big, from the team behind Tiny Pip.">
+  <link rel="canonical" href="https://heytinypip.com/blog/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFF9EC">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tiny Pip">
+  <meta property="og:url" content="https://heytinypip.com/blog/">
+  <meta property="og:title" content="The Tiny Pip blog">
+  <meta property="og:description" content="Practical, kind articles about procrastination, task paralysis and getting started.">
+  <meta property="og:image" content="https://heytinypip.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Tiny Pip app icon and Pip, a small green companion.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://heytinypip.com/blog/#blog",
+        "url": "https://heytinypip.com/blog/",
+        "name": "The Tiny Pip blog",
+        "description": "Practical, kind articles about procrastination, task paralysis and getting started when a task feels too big.",
+        "inLanguage": "en-US",
+        "isPartOf": { "@id": "https://heytinypip.com/#website" },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://heytinypip.com/#publisher",
+          "name": "Emberforge Works, LLC",
+          "url": "https://heytinypip.com/"
+        },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "@id": "https://heytinypip.com/blog/why-starting-a-task-is-harder-than-doing-it/#article",
+            "headline": "Why Is Starting a Task Harder Than Doing It?",
+            "url": "https://heytinypip.com/blog/why-starting-a-task-is-harder-than-doing-it/",
+            "datePublished": "2026-11-19"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tiny Pip", "item": "https://heytinypip.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://heytinypip.com/blog/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function (d, n) {
+      var ua = n.userAgent;
+      var ios = /iPhone|iPad|iPod/.test(ua) || (n.platform === "MacIntel" && n.maxTouchPoints > 1);
+      d.dataset.os = ios ? "ios" : /Android/.test(ua) ? "android" : "other";
+      if (/musical_ly|Bytedance|TikTok/i.test(ua)) d.dataset.inapp = "tiktok";
+    })(document.documentElement, navigator);
+  </script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <!-- partial:header -->
+  <header class="site-header">
+    <div class="wrap site-header-bar">
+      <a class="brand-link" href="/" aria-label="Tiny Pip home">
+        <img src="/assets/img/icon-256.png" width="40" height="40" alt="">
+        <span>Tiny Pip</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-menu">
+          <summary data-cta="nav_features">Features</summary>
+          <div class="mega">
+            <div class="mega-groups">
+              <div class="mega-group">
+                <h2>When starting is hard</h2>
+                <ul>
+                  <li><a href="/features/#one-thing">One thing at a time<span>Not a giant list</span></a></li>
+                  <li><a href="/features/#tiny-first-steps">Tiny first steps<span>Small enough to begin</span></a></li>
+                  <li><a href="/task-breakdown/">Break it down<span>Help turning a task into steps</span></a></li>
+                  <li><a href="/features/#focus-timer">Focus timer<span>10, 20 or 30 quiet minutes</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>When productivity feels bad</h2>
+                <ul>
+                  <li><a href="/gentle-productivity/">Gentle productivity<span>Why Pip never guilts you</span></a></li>
+                  <li><a href="/features/#no-streaks">No streaks to lose<span>Each week starts fresh</span></a></li>
+                  <li><a href="/features/#rest">Rest is allowed<span>Stopping is always a choice</span></a></li>
+                  <li><a href="/self-care-companion/">Self-care<span>Check-ins, comfort and kindness</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Your companion</h2>
+                <ul>
+                  <li><a href="/features/#pip">Meet Pip<span>A small friend who cheers</span></a></li>
+                  <li><a href="/virtual-pet-productivity-app/">Adventures<span>Your progress, Pip’s trips</span></a></li>
+                  <li><a href="/features/#collections">Collections and pets<span>Items, outfits and friends</span></a></li>
+                  <li><a href="/features/#places">Places to explore<span>From the Backyard on</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Building routines</h2>
+                <ul>
+                  <li><a href="/features/#habits">Habits<span>Water, reading, anything</span></a></li>
+                  <li><a href="/features/#reminders">Reminders<span>Gentle, and only when you want</span></a></li>
+                  <li><a href="/features/#your-week">Your week<span>A few good days, not every day</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a href="/features/">See all features</a>
+              <a href="/#how-title">How Tiny Pip works</a>
+              <a href="/features/#free-and-plus">Free and Plus</a>
+              <a href="/blog/" aria-current="page">Blog</a>
+            </div>
+          </div>
+        </details>
+        <a class="button button--small" href="/#waitlist" data-cta="nav_beta">Get the beta</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /partial:header -->
+
+  <main class="wrap">
+    <div class="article">
+      <header class="article-header">
+        <ol class="breadcrumbs">
+          <li><a href="/">Home</a></li>
+          <li>Blog</li>
+        </ol>
+        <h1>The Tiny Pip blog</h1>
+        <p class="lede">Practical, kind ideas for the moment you know what to do and still can’t start. Each article is useful on its own, whether or not you ever use Tiny Pip.</p>
+      </header>
+
+      <ul class="post-list">
+        <li class="post-card">
+          <a href="/blog/why-starting-a-task-is-harder-than-doing-it/">
+            <time datetime="2026-11-19">November 19, 2026</time>
+            <h2>Why is starting a task harder than doing it?</h2>
+            <p>The bad feelings, the uncertainty and the size of the job all sit at the beginning. Why that happens, and 7 gentle ways to make starting easier.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- partial:cta -->
+  <section class="content-section" aria-labelledby="cta-title" data-section="cta">
+    <div class="wrap">
+      <div class="cta-card">
+        <h2 id="cta-title">Try Tiny Pip free</h2>
+        <p>Tiny Pip is in beta on iPhone and Android. Pick one thing, take a tiny first step, and send Pip exploring.</p>
+        <div class="hero-ctas">
+          <div class="hero-cta hero-cta--ios">
+            <a class="button" href="https://testflight.apple.com/join/zn4xnr6C" rel="noopener" data-cta="page_ios">Get it free on iPhone</a>
+            <p class="hero-hint">Opens TestFlight, Apple’s free app for betas.</p>
+          </div>
+          <div class="hero-cta hero-cta--android">
+            <a class="button" href="/#beta-android" data-cta="page_android">Get it free on Android</a>
+            <p class="hero-hint">A quick sign-up through Google Play.</p>
+          </div>
+        </div>
+        <p class="fine">Free beta. No account, no streaks. <a href="/#waitlist">How the beta works</a></p>
+      </div>
+    </div>
+  </section>
+  <!-- /partial:cta -->
+
+  <!-- partial:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav class="footer-nav" aria-label="More about Tiny Pip">
+        <div>
+          <h2>Tiny Pip</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/features/">All features</a></li>
+            <li><a href="/features/#free-and-plus">Free and Plus</a></li>
+            <li><a href="/blog/" aria-current="page">Blog</a></li>
+            <li><a href="/#waitlist">Join the beta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Getting started</h2>
+          <ul>
+            <li><a href="/procrastination-app/">A procrastination app</a></li>
+            <li><a href="/task-paralysis/">Task paralysis</a></li>
+            <li><a href="/task-breakdown/">Breaking tasks down</a></li>
+            <li><a href="/adhd-friendly-task-app/">ADHD-friendly tasks</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Feeling better</h2>
+          <ul>
+            <li><a href="/gentle-productivity/">Gentle productivity</a></li>
+            <li><a href="/self-care-companion/">Self-care companion</a></li>
+            <li><a href="/virtual-pet-productivity-app/">A virtual pet that helps</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="social-title">Follow Pip</p>
+      <ul class="social-links">
+        <li><a href="https://www.tiktok.com/@heytinypip" rel="me noopener" data-social="tiktok"><span>TikTok</span> @heytinypip</a></li>
+        <li><a href="https://www.instagram.com/heytinypip/" rel="me noopener" data-social="instagram"><span>Instagram</span> @heytinypip</a></li>
+      </ul>
+      <ul class="footer-links">
+        <li><a href="/privacy.html">Privacy policy</a></li>
+        <li><a href="mailto:feedback@heytinypip.com">feedback@heytinypip.com</a></li>
+      </ul>
+      <p>© <span data-year>2026</span> Emberforge Works, LLC</p>
+    </div>
+  </footer>
+  <!-- /partial:footer -->
+</body>
+</html>
