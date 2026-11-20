@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Analytics: setup and consent defaults in js/analytics.js -->
+  <script src="/js/analytics.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVT7NBYHYV"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ADHD-Friendly Task App for Getting Started | Tiny Pip</title>
+  <meta name="description" content="Tiny Pip is a task app designed around starting: one task at a time, tiny first steps, short focus sessions, gentle reminders and no streaks. A productivity app, not ADHD treatment.">
+  <link rel="canonical" href="https://heytinypip.com/adhd-friendly-task-app/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFF9EC">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tiny Pip">
+  <meta property="og:url" content="https://heytinypip.com/adhd-friendly-task-app/">
+  <meta property="og:title" content="A gentler way to start when your brain says “not yet”">
+  <meta property="og:description" content="One task at a time, tiny first steps, short focus sessions and no streaks. Designed around task initiation and overwhelm.">
+  <meta property="og:image" content="https://heytinypip.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Tiny Pip app icon and Pip, a small green companion.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://heytinypip.com/adhd-friendly-task-app/#webpage",
+        "url": "https://heytinypip.com/adhd-friendly-task-app/",
+        "name": "An ADHD-friendly task app for getting started",
+        "description": "Tiny Pip is a task app designed around starting: one task at a time, tiny first steps, short focus sessions, gentle reminders and no streaks. A productivity app, not ADHD treatment.",
+        "isPartOf": {
+          "@id": "https://heytinypip.com/#website"
+        },
+        "about": {
+          "@id": "https://heytinypip.com/#app"
+        },
+        "primaryImageOfPage": "https://heytinypip.com/assets/img/app/tinypip-focus-session.jpg",
+        "breadcrumb": {
+          "@id": "https://heytinypip.com/adhd-friendly-task-app/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://heytinypip.com/adhd-friendly-task-app/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Tiny Pip",
+            "item": "https://heytinypip.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ADHD-friendly task app",
+            "item": "https://heytinypip.com/adhd-friendly-task-app/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://heytinypip.com/adhd-friendly-task-app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Tiny Pip made for people with ADHD?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tiny Pip is made for anyone who knows what to do and still can’t start. Many people with ADHD describe that feeling, and the app was designed around it: one task at a time, tiny first steps, short focus sessions and no streaks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Tiny Pip treat ADHD?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Tiny Pip is a productivity and self-care app, not ADHD treatment or medical care. It doesn’t diagnose, treat or improve any condition, and it isn’t a replacement for professional support."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can an app help with task initiation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An app can’t do the task for you, but it can make starting easier: showing one thing instead of a long list, making the first step small and clear, and rewarding you for starting. That’s what Tiny Pip is built to do."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will Tiny Pip flood me with notifications?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You choose how often Pip checks in, from once a day to only when you ask. Quiet hours are on by default, and once you’ve made progress that day, Pip stops nudging."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I forget about the app for a while?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nothing is lost and nothing resets. There are no streaks, Pip never mentions missed days, and your tasks and notes are waiting where you left them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Tiny Pip free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Tiny Pip is free to download and use, and it’s in a free beta on iPhone and Android now. An optional Plus plan is coming at launch, but starting tasks and reminders are always free."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function (d, n) {
+      var ua = n.userAgent;
+      var ios = /iPhone|iPad|iPod/.test(ua) || (n.platform === "MacIntel" && n.maxTouchPoints > 1);
+      d.dataset.os = ios ? "ios" : /Android/.test(ua) ? "android" : "other";
+      if (/musical_ly|Bytedance|TikTok/i.test(ua)) d.dataset.inapp = "tiktok";
+    })(document.documentElement, navigator);
+  </script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <!-- partial:header -->
+  <header class="site-header">
+    <div class="wrap site-header-bar">
+      <a class="brand-link" href="/" aria-label="Tiny Pip home">
+        <img src="/assets/img/icon-256.png" width="40" height="40" alt="">
+        <span>Tiny Pip</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-menu">
+          <summary data-cta="nav_features">Features</summary>
+          <div class="mega">
+            <div class="mega-groups">
+              <div class="mega-group">
+                <h2>When starting is hard</h2>
+                <ul>
+                  <li><a href="/features/#one-thing">One thing at a time<span>Not a giant list</span></a></li>
+                  <li><a href="/features/#tiny-first-steps">Tiny first steps<span>Small enough to begin</span></a></li>
+                  <li><a href="/task-breakdown/">Break it down<span>Help turning a task into steps</span></a></li>
+                  <li><a href="/features/#focus-timer">Focus timer<span>10, 20 or 30 quiet minutes</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>When productivity feels bad</h2>
+                <ul>
+                  <li><a href="/gentle-productivity/">Gentle productivity<span>Why Pip never guilts you</span></a></li>
+                  <li><a href="/features/#no-streaks">No streaks to lose<span>Each week starts fresh</span></a></li>
+                  <li><a href="/features/#rest">Rest is allowed<span>Stopping is always a choice</span></a></li>
+                  <li><a href="/self-care-companion/">Self-care<span>Check-ins, comfort and kindness</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Your companion</h2>
+                <ul>
+                  <li><a href="/features/#pip">Meet Pip<span>A small friend who cheers</span></a></li>
+                  <li><a href="/virtual-pet-productivity-app/">Adventures<span>Your progress, Pip’s trips</span></a></li>
+                  <li><a href="/features/#collections">Collections and pets<span>Items, outfits and friends</span></a></li>
+                  <li><a href="/features/#places">Places to explore<span>From the Backyard on</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Building routines</h2>
+                <ul>
+                  <li><a href="/features/#habits">Habits<span>Water, reading, anything</span></a></li>
+                  <li><a href="/features/#reminders">Reminders<span>Gentle, and only when you want</span></a></li>
+                  <li><a href="/features/#your-week">Your week<span>A few good days, not every day</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a href="/features/">See all features</a>
+              <a href="/#how-title">How Tiny Pip works</a>
+              <a href="/features/#free-and-plus">Free and Plus</a>
+              <a href="/blog/">Blog</a>
+            </div>
+          </div>
+        </details>
+        <a class="button button--small" href="/#waitlist" data-cta="nav_beta">Get the beta</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /partial:header -->
+
+  <main>
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap page-hero-grid">
+        <div>
+          <ol class="breadcrumbs">
+            <li><a href="/">Home</a></li>
+            <li>ADHD-friendly task app</li>
+          </ol>
+          <p class="eyebrow">ADHD-friendly</p>
+          <h1 id="page-title">A gentler way to start when your brain says “not yet”</h1>
+          <p class="lede">Many people with ADHD describe the same frustrating gap: knowing exactly what needs doing, wanting to do it, and still not being able to begin. Tiny Pip was designed around that gap.</p>
+          <p class="answer"><strong>The short answer:</strong> Tiny Pip is a task app designed around starting, the part many people with ADHD describe as hardest. It shows one task at a time, turns it into a tiny first step, offers short focus sessions, and has no streaks to break. It’s a productivity and self-care app, not ADHD treatment.</p>
+        </div>
+        <figure class="phone">
+          <div class="phone-screen">
+              <picture>
+                <source srcset="/assets/img/app/tinypip-focus-session.webp" type="image/webp">
+                <img src="/assets/img/app/tinypip-focus-session.jpg" width="600" height="1182" fetchpriority="high"
+                     alt="A focus timer at 19:52. Pip, reading a book, says “I’ll stay quiet. You’re on: Find which account the subscription is on,” with Pause and Stop buttons.">
+              </picture>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="disclaimer-title" data-section="adhd-disclaimer">
+      <div class="wrap">
+        <div class="note">
+          <p id="disclaimer-title"><strong>Tiny Pip is a productivity and self-care app, not ADHD treatment or medical care.</strong> It doesn’t diagnose, treat or replace anything a doctor, therapist or coach provides. It’s a small companion for getting started on everyday tasks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="struggles-title" data-section="adhd-struggles">
+      <div class="wrap">
+        <div class="text">
+          <h2 id="struggles-title">What many people describe</h2>
+          <p>Talk to people with ADHD about to-do apps and some of the same frustrations come up again and again:</p>
+          <ul>
+            <li><strong>Starting is the wall.</strong> The task is clear and important, and it still doesn’t happen. Often this is called task initiation, or “task paralysis.”</li>
+            <li><strong>Long lists backfire.</strong> Writing everything down feels productive, then the list becomes one more thing to avoid looking at.</li>
+            <li><strong>Interruptions erase progress.</strong> After a break, it’s hard to remember where you were, so restarting feels like starting from scratch.</li>
+            <li><strong>Streaks turn into guilt.</strong> A broken streak can make it feel like the whole system has failed, and it’s easier to abandon the app than to come back.</li>
+            <li><strong>Notifications pile up.</strong> Constant nudges get tuned out, or worse, start to feel like nagging.</li>
+          </ul>
+          <p>None of these are unique to ADHD. Lots of people struggle with starting. But they shaped a lot of Tiny Pip’s design choices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="design-title" data-section="adhd-design">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="design-title">Designed around task initiation and overwhelm</h2>
+          <p>Here’s how each of those struggles shows up in the app.</p>
+        </div>
+        <article class="feature" id="one-thing">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-one-task-home.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-one-task-home.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Tiny Pip’s home screen. Pip, in an explorer hat and backpack, asks “Still want to start ‘Tidy the kitchen’?” with two buttons: “Let’s start” and “Start something new.” At the top, the week reads “4 of 3 days this week.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>One suggestion, not a wall of tasks.</figcaption>
+          </figure>
+          <div class="text">
+            <h3>One thing at a time, not a giant list</h3>
+            <p>Tiny Pip’s home screen shows one suggestion with a big <strong>Let’s start</strong> button. There are no overdue badges and no wall of tasks. Your full list exists, but you only see it when you go looking.</p>
+          </div>
+        </article>
+        <article class="feature feature--flip" id="tiny-steps">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-task-breakdown.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-task-breakdown.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="After tapping “Help me break this down” on “Plan a birthday dinner for my mom,” Pip says “Here’s a smaller place to start. Change anything you like.” Below are editable steps, such as “Open a note and jot down three things your mom loves to eat,” each with buttons to move it up, move it down or remove it.">
+                </picture>
+              </div>
+            </div>
+            <figcaption>Steps you can edit before you start.</figcaption>
+          </figure>
+          <div class="text">
+            <h3>Tiny first steps, and help breaking things down</h3>
+            <p>For common chores, Pip suggests small ready-made steps. For anything else, you can tap <strong>Help me break this down</strong> and an optional AI helper suggests a few small steps you can edit, reorder or remove. Free includes a few AI breakdowns a week. <a href="/task-breakdown/">How it works</a>.</p>
+          </div>
+        </article>
+        <article class="feature" id="starting">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-start-task-reward.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-start-task-reward.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Pip celebrates: “Nice, you got started!” Badges show +15 XP and +30 AP for “Cancel my gym membership.” Below, the current step, “Find which account the subscription is on,” and the buttons “Done with this step,” “Focus timer,” “Take a break” and “Done for now.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>Starting is the big moment.</figcaption>
+          </figure>
+          <div class="text">
+            <h3>Starting counts most</h3>
+            <p>In Tiny Pip, starting a task earns more than finishing it. Tap <strong>I’ve started</strong> and Pip cheers right away. That quick, visible reward is there for the moment you need it most: the beginning.</p>
+          </div>
+        </article>
+        <article class="feature feature--flip" id="pick-up">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-pick-up-where-you-left-off.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-pick-up-where-you-left-off.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Pip asks “Want to pick up ‘Cancel my gym membership’?” A card shows the next step, “Find which account the subscription is on,” and a note: “Password is in the blue notebook.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>A note from past you.</figcaption>
+          </figure>
+          <div class="text">
+            <h3>Built for interruptions</h3>
+            <p>Stop whenever you need to. Pip offers to save a quick note, and next time shows your next step and that note, so coming back doesn’t mean starting over. A short focus timer of 10, 20 or 30 minutes is there when you want structure, and Pip asks about a break when it ends.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="gentle-title" data-section="adhd-gentle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="gentle-title">No guilt, and fewer nudges</h2>
+        </div>
+        <ul class="feature-list">
+          <li class="mini">
+            <h3>No streaks</h3>
+            <p>There’s nothing to break. Home shows how many days you made progress this week, toward a goal you choose from 2 to 7 days. Each Monday starts fresh, and missing a day resets nothing.</p>
+          </li>
+          <li class="mini">
+            <h3>Reminders on your terms</h3>
+            <p>Choose how often Pip checks in, from once a day to only when you ask. Quiet hours are on by default, Pip stops nudging once you’ve made progress that day, and work tasks only come up during your work hours.</p>
+          </li>
+          <li class="mini">
+            <h3>Coming back is easy</h3>
+            <p>Forgot the app for a week? Pip never mentions missed days or overdue tasks. When you come back, Pip is just happy to see you. Even the daily gift doesn’t reset.</p>
+          </li>
+          <li class="mini">
+            <h3>Rewards for real life</h3>
+            <p>Your progress sends Pip on adventures that run while the app is closed. Time in the app earns nothing, so there’s no reason to stay. <a href="/virtual-pet-productivity-app/">About Pip’s adventures</a>.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="isnt-title" data-section="adhd-isnt">
+      <div class="wrap">
+        <div class="text">
+          <h2 id="isnt-title">What Tiny Pip isn’t</h2>
+          <p>Tiny Pip isn’t a treatment, and it isn’t a substitute for medication, therapy or coaching. It hasn’t been clinically tested, and it doesn’t claim to change ADHD symptoms. What it offers is smaller: a friendly nudge toward one task, a first step that’s easy to take, and no shame when you stop.</p>
+          <p>If you have questions about ADHD, a doctor or other qualified professional is the right person to talk to. Many people use tools like Tiny Pip alongside the support they already have.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="faq-title" data-section="adhd-friendly-task-app-faq">
+      <div class="wrap">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Is Tiny Pip made for people with ADHD?</summary>
+            <p>Tiny Pip is made for anyone who knows what to do and still can’t start. Many people with ADHD describe that feeling, and the app was designed around it: one task at a time, tiny first steps, short focus sessions and no streaks.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Tiny Pip treat ADHD?</summary>
+            <p>No. Tiny Pip is a productivity and self-care app, not ADHD treatment or medical care. It doesn’t diagnose, treat or improve any condition, and it isn’t a replacement for professional support.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can an app help with task initiation?</summary>
+            <p>An app can’t do the task for you, but it can make starting easier: showing one thing instead of a long list, making the first step small and clear, and rewarding you for starting. That’s what Tiny Pip is built to do.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will Tiny Pip flood me with notifications?</summary>
+            <p>No. You choose how often Pip checks in, from once a day to only when you ask. Quiet hours are on by default, and once you’ve made progress that day, Pip stops nudging.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I forget about the app for a while?</summary>
+            <p>Nothing is lost and nothing resets. There are no streaks, Pip never mentions missed days, and your tasks and notes are waiting where you left them.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is Tiny Pip free?</summary>
+            <p>Yes. Tiny Pip is free to download and use, and it’s in a free beta on iPhone and Android now. An optional Plus plan is coming at launch, but starting tasks and reminders are always free.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="more-title" data-section="adhd-friendly-task-app-more">
+      <div class="wrap">
+        <h2 id="more-title">More about how Tiny Pip works</h2>
+        <ul class="related">
+          <li><a href="/task-paralysis/"><strong>For task paralysis</strong><span>When you know what to do but can’t begin.</span></a></li>
+          <li><a href="/task-breakdown/"><strong>Breaking tasks down</strong><span>Find the first tiny step.</span></a></li>
+          <li><a href="/procrastination-app/"><strong>For procrastination</strong><span>A to-do app for the hardest part: starting.</span></a></li>
+          <li><a href="/gentle-productivity/"><strong>Gentle productivity</strong><span>No guilt, no streaks, rest allowed.</span></a></li>
+          <li><a href="/features/"><strong>All features</strong><span>Everything Pip does, in one place.</span></a></li>
+          <li><a href="/virtual-pet-productivity-app/"><strong>A virtual pet that helps</strong><span>Real progress, Pip’s adventures.</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- partial:cta -->
+    <section class="content-section" aria-labelledby="cta-title" data-section="cta">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2 id="cta-title">Try Tiny Pip free</h2>
+          <p>Tiny Pip is in beta on iPhone and Android. Pick one thing, take a tiny first step, and send Pip exploring.</p>
+          <div class="hero-ctas">
+            <div class="hero-cta hero-cta--ios">
+              <a class="button" href="https://testflight.apple.com/join/zn4xnr6C" rel="noopener" data-cta="page_ios">Get it free on iPhone</a>
+              <p class="hero-hint">Opens TestFlight, Apple’s free app for betas.</p>
+            </div>
+            <div class="hero-cta hero-cta--android">
+              <a class="button" href="/#beta-android" data-cta="page_android">Get it free on Android</a>
+              <p class="hero-hint">A quick sign-up through Google Play.</p>
+            </div>
+          </div>
+          <p class="fine">Free beta. No account, no streaks. <a href="/#waitlist">How the beta works</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- /partial:cta -->
+  </main>
+
+  <!-- partial:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav class="footer-nav" aria-label="More about Tiny Pip">
+        <div>
+          <h2>Tiny Pip</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/features/">All features</a></li>
+            <li><a href="/features/#free-and-plus">Free and Plus</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#waitlist">Join the beta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Getting started</h2>
+          <ul>
+            <li><a href="/procrastination-app/">A procrastination app</a></li>
+            <li><a href="/task-paralysis/">Task paralysis</a></li>
+            <li><a href="/task-breakdown/">Breaking tasks down</a></li>
+            <li><a href="/adhd-friendly-task-app/" aria-current="page">ADHD-friendly tasks</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Feeling better</h2>
+          <ul>
+            <li><a href="/gentle-productivity/">Gentle productivity</a></li>
+            <li><a href="/self-care-companion/">Self-care companion</a></li>
+            <li><a href="/virtual-pet-productivity-app/">A virtual pet that helps</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="social-title">Follow Pip</p>
+      <ul class="social-links">
+        <li><a href="https://www.tiktok.com/@heytinypip" rel="me noopener" data-social="tiktok"><span>TikTok</span> @heytinypip</a></li>
+        <li><a href="https://www.instagram.com/heytinypip/" rel="me noopener" data-social="instagram"><span>Instagram</span> @heytinypip</a></li>
+      </ul>
+      <ul class="footer-links">
+        <li><a href="/privacy.html">Privacy policy</a></li>
+        <li><a href="mailto:feedback@heytinypip.com">feedback@heytinypip.com</a></li>
+      </ul>
+      <p>© <span data-year>2026</span> Emberforge Works, LLC</p>
+    </div>
+  </footer>
+  <!-- /partial:footer -->
+</body>
+</html>

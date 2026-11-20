@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Analytics: setup and consent defaults in js/analytics.js -->
+  <script src="/js/analytics.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVT7NBYHYV"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virtual Pet Productivity App | Tiny Pip</title>
+  <meta name="description" content="Tiny Pip is a virtual pet productivity app that rewards what you do in real life, not time on your phone. Start a task, earn Adventure Points, and Pip explores while the app is closed, coming home with items, outfits and pets.">
+  <link rel="canonical" href="https://heytinypip.com/virtual-pet-productivity-app/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFF9EC">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tiny Pip">
+  <meta property="og:url" content="https://heytinypip.com/virtual-pet-productivity-app/">
+  <meta property="og:title" content="Get things done in real life. Let Pip have the adventure.">
+  <meta property="og:description" content="A virtual pet productivity app where your real progress sends Pip exploring, and Pip comes home with items, outfits and pets.">
+  <meta property="og:image" content="https://heytinypip.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Tiny Pip app icon and Pip, a small green companion.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://heytinypip.com/virtual-pet-productivity-app/#webpage",
+        "url": "https://heytinypip.com/virtual-pet-productivity-app/",
+        "name": "Virtual pet productivity app",
+        "description": "How Tiny Pip turns real-life progress into adventures for Pip, a small virtual companion who explores while the app is closed and comes home with items, outfits and pets.",
+        "isPartOf": { "@id": "https://heytinypip.com/#website" },
+        "about": { "@id": "https://heytinypip.com/#app" },
+        "primaryImageOfPage": "https://heytinypip.com/assets/img/app/tinypip-pip-returns-with-a-find.jpg",
+        "breadcrumb": { "@id": "https://heytinypip.com/virtual-pet-productivity-app/#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://heytinypip.com/virtual-pet-productivity-app/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tiny Pip", "item": "https://heytinypip.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Virtual pet productivity app", "item": "https://heytinypip.com/virtual-pet-productivity-app/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://heytinypip.com/virtual-pet-productivity-app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Tiny Pip a virtual pet app or a to-do app?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Both, in that order of importance: the tasks come first. Tiny Pip helps you pick one thing and take a tiny first step, and the virtual pet side, Pip’s adventures and collections, exists to make that step feel worth it." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I have to keep the app open for Pip to explore?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Once you send Pip off, you can close the app. Pip keeps exploring and sends a “Pip’s back!” notification when the trip is over. Calling Pip back early gives you the unused Adventure Points back." }
+          },
+          {
+            "@type": "Question",
+            "name": "Will Pip get hungry, sick or sad if I don’t open the app?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Pip has no hunger or health meter to keep topped up, and missing a day doesn’t reset anything. When you come back, Pip is just happy to see you." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Tiny Pip reward screen time?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Opening the app and watching Pip explore earn nothing. Adventure Points come from starting tasks, finishing steps and tasks, and logging habits, so the only way to send Pip anywhere is to do something in real life." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I buy items or coins with real money?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. The shop only takes coins, and coins come from Pip’s adventures, small daily goals, weekly quests and daily gifts. Free and Plus get the same rewards and the same odds." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which places can Pip explore?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Everyone starts in the Backyard. With Plus, the Forest, the Mountain and the Castle open too. When Tiny Pip launches, three more free places open: Candy Meadow, the Pirate Ship and the Crystal Cave." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Tiny Pip free?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tiny Pip is free to download and use, and it’s in a free beta on iPhone and Android now. An optional Plus plan with extra places is coming at launch." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function (d, n) {
+      var ua = n.userAgent;
+      var ios = /iPhone|iPad|iPod/.test(ua) || (n.platform === "MacIntel" && n.maxTouchPoints > 1);
+      d.dataset.os = ios ? "ios" : /Android/.test(ua) ? "android" : "other";
+      if (/musical_ly|Bytedance|TikTok/i.test(ua)) d.dataset.inapp = "tiktok";
+    })(document.documentElement, navigator);
+  </script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <!-- partial:header -->
+  <header class="site-header">
+    <div class="wrap site-header-bar">
+      <a class="brand-link" href="/" aria-label="Tiny Pip home">
+        <img src="/assets/img/icon-256.png" width="40" height="40" alt="">
+        <span>Tiny Pip</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-menu">
+          <summary data-cta="nav_features">Features</summary>
+          <div class="mega">
+            <div class="mega-groups">
+              <div class="mega-group">
+                <h2>When starting is hard</h2>
+                <ul>
+                  <li><a href="/features/#one-thing">One thing at a time<span>Not a giant list</span></a></li>
+                  <li><a href="/features/#tiny-first-steps">Tiny first steps<span>Small enough to begin</span></a></li>
+                  <li><a href="/task-breakdown/">Break it down<span>Help turning a task into steps</span></a></li>
+                  <li><a href="/features/#focus-timer">Focus timer<span>10, 20 or 30 quiet minutes</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>When productivity feels bad</h2>
+                <ul>
+                  <li><a href="/gentle-productivity/">Gentle productivity<span>Why Pip never guilts you</span></a></li>
+                  <li><a href="/features/#no-streaks">No streaks to lose<span>Each week starts fresh</span></a></li>
+                  <li><a href="/features/#rest">Rest is allowed<span>Stopping is always a choice</span></a></li>
+                  <li><a href="/self-care-companion/">Self-care<span>Check-ins, comfort and kindness</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Your companion</h2>
+                <ul>
+                  <li><a href="/features/#pip">Meet Pip<span>A small friend who cheers</span></a></li>
+                  <li><a href="/virtual-pet-productivity-app/" aria-current="page">Adventures<span>Your progress, Pip’s trips</span></a></li>
+                  <li><a href="/features/#collections">Collections and pets<span>Items, outfits and friends</span></a></li>
+                  <li><a href="/features/#places">Places to explore<span>From the Backyard on</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Building routines</h2>
+                <ul>
+                  <li><a href="/features/#habits">Habits<span>Water, reading, anything</span></a></li>
+                  <li><a href="/features/#reminders">Reminders<span>Gentle, and only when you want</span></a></li>
+                  <li><a href="/features/#your-week">Your week<span>A few good days, not every day</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a href="/features/">See all features</a>
+              <a href="/#how-title">How Tiny Pip works</a>
+              <a href="/features/#free-and-plus">Free and Plus</a>
+              <a href="/blog/">Blog</a>
+            </div>
+          </div>
+        </details>
+        <a class="button button--small" href="/#waitlist" data-cta="nav_beta">Get the beta</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /partial:header -->
+
+  <main>
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap page-hero-grid">
+        <div>
+          <ol class="breadcrumbs">
+            <li><a href="/">Home</a></li>
+            <li>Virtual pet productivity app</li>
+          </ol>
+          <p class="eyebrow">A virtual pet productivity app</p>
+          <h1 id="page-title">Get things done in real life. Let Pip have the adventure.</h1>
+          <p class="lede">Tiny Pip is a to-do app with a small companion named Pip. When you start a real task, finish a step or log a habit, Pip earns time to go exploring. You put the phone down; Pip comes home with something to show you.</p>
+          <p class="answer"><strong>Looking for a virtual pet that helps you get things done?</strong> Tiny Pip rewards what you actually do, not time spent in the app. Starting a task earns Adventure Points, Pip spends them exploring while the app is closed, and comes back with items, outfits, coins and, now and then, a pet. It’s free, on iPhone and Android.</p>
+        </div>
+        <figure class="phone">
+          <div class="phone-screen">
+            <picture>
+              <source srcset="/assets/img/app/tinypip-pip-returns-with-a-find.webp" type="image/webp">
+              <img src="/assets/img/app/tinypip-pip-returns-with-a-find.jpg" width="600" height="1182" fetchpriority="high"
+                   alt="Pip, back from an adventure with a bumblebee, says “I’m back! Look what I found.” A card reads “Back from the Backyard,” Backyard level 16, and “Found: Golden four-leaf clover (Legendary).”">
+            </picture>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─── The loop ──────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="loop-title" data-section="pet-loop">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="loop-title">How your real progress becomes Pip’s adventure</h2>
+          <p>The game runs on one simple loop, and the first step of it always happens away from the screen.</p>
+        </div>
+        <div class="text">
+          <ol class="loop">
+            <li><strong>Pick one real thing.</strong> A bill, an email, the dishes, a work task. Pip helps you find a tiny first step.</li>
+            <li><strong>Start it.</strong> Tap “I’ve started.” Finishing steps, finishing the task and logging habits count too.</li>
+            <li><strong>Earn Adventure Points.</strong> Starting earns more than finishing. Your first start of the day is enough for a whole trip.</li>
+            <li><strong>Send Pip exploring.</strong> Choose a place and a length, from 5 minutes to an hour, then close the app.</li>
+            <li><strong>Pip comes home with finds.</strong> Items to collect, things to wear, coins, and sometimes a new pet friend.</li>
+            <li><strong>Places grow.</strong> Each place levels up as Pip explores it, and the finds there get luckier.</li>
+          </ol>
+          <p>That’s the whole idea: the progress is yours, the adventure is Pip’s. You don’t need to watch, tap or check in for the reward to happen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Real life first ───────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="real-title" data-section="pet-real-life">
+      <div class="wrap">
+        <article class="feature">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/shot-adventure.webp" type="image/webp">
+                  <img src="/assets/img/shot-adventure.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Pip, wearing a big backpack and explorer hat, walks through the Backyard with a bumblebee. A card reads “Exploring the Backyard” with a 5:58 countdown and the note “You can close the app; Pip keeps going.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>Pip explores on a timer. You don’t have to watch.</figcaption>
+          </figure>
+          <div class="text">
+            <h2 id="real-title">A virtual pet that wants you off your phone</h2>
+            <p>Many games are designed to keep you looking at them. Tiny Pip is designed the other way around. Opening the app earns nothing. Watching Pip explore earns nothing. The only way to send Pip anywhere is to do something in your real day.</p>
+            <p>Once Pip sets off, the trip runs on its own. You can lock your phone and go do the next thing; when the time’s up, a “Pip’s back!” notification lets you know there’s something waiting. Changed your mind? Calling Pip back early gives you the unused points back.</p>
+            <p>Rewards also level off after a busy day. There’s nothing to grind for, and Pip never tells you to keep going.</p>
+          </div>
+        </article>
+
+        <article class="feature feature--flip">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-start-task-reward.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-start-task-reward.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Pip celebrates: “Nice, you got started!” Badges show +15 XP and +30 AP. Below, the current step and the buttons “Done with this step,” “Focus timer,” “Take a break” and “Done for now.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>Starting a task earns Adventure Points (AP).</figcaption>
+          </figure>
+          <div class="text">
+            <h2>Why starting earns the most</h2>
+            <p>For a lot of people, the hardest part of a task isn’t doing it. It’s beginning. So Tiny Pip pays the most for the moment you begin: tap <strong>I’ve started</strong>, and Pip cheers and hands you Adventure Points. Your first start of the day earns enough for a 5-minute trip all by itself.</p>
+            <p>Finishing a step, finishing the task and logging a habit all add more. Already did it before you opened the app? <strong>Already done</strong> counts too.</p>
+            <p>This is the part that makes the pet useful. On a day when you can’t face the whole task, starting it is enough to give Pip somewhere to go. <a href="/procrastination-app/">More about starting when it’s hard</a>.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── Places ────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="places-title" data-section="pet-places">
+      <div class="wrap">
+        <article class="feature">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-adventure-places.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-adventure-places.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Planning a trip: Pip says “Where to? The Backyard is full of surprises.” The Backyard at level 16 is set to 5 minutes with a “Send Pip · 30 AP” button. Below, the places: Backyard, marked Next up with Luck ×2.7, and the Forest, Mountain and Castle, which open with Plus.">
+                </picture>
+              </div>
+            </div>
+            <figcaption>Pick a place and how long Pip should explore.</figcaption>
+          </figure>
+          <div class="text">
+            <h2 id="places-title">Places to explore</h2>
+            <p>Every adventure happens somewhere. Pip starts in the <strong>Backyard</strong>, full of daisies, ladybugs and garden gnomes. With Plus, the <strong>Forest</strong>, the <strong>Mountain</strong> and the <strong>Castle</strong> open too. When Tiny Pip launches, three more free places open: <strong>Candy Meadow</strong>, the <strong>Pirate Ship</strong> and the <strong>Crystal Cave</strong>.</p>
+            <p>Each place has 25 levels, and it levels up the more Pip explores there. Higher levels bring better luck, and every fifth level brings a guaranteed piece of gear for Pip to wear. If you’re not sure where to go, the Adventures screen suggests a place to explore next.</p>
+            <p>On some weekends, rare finds are three times as likely everywhere.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── Collections ───────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="collect-title" data-section="pet-collections">
+      <div class="wrap">
+        <article class="feature feature--flip">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-collection.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-collection.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="The Backyard collection, 18 of 20 found: sunglasses, a sandwich, a soccer ball, a daisy, a ladybug, an apple, a watering can, a garden trowel, a picnic basket, a bike helmet, a kite, a birdhouse, ladybug wings, a garden gnome, a golden soccer ball and a golden four-leaf clover.">
+                </picture>
+              </div>
+            </div>
+            <figcaption>The Backyard has 20 things to find.</figcaption>
+          </figure>
+          <div class="text">
+            <h2 id="collect-title">Things to find, wear and collect</h2>
+            <p>Every few minutes of exploring is a chance to find something. Each place has a board of 20 items, from common to uncommon, rare and legendary, like the Backyard’s golden four-leaf clover. Many of them are things Pip can wear: sunglasses, a bike helmet, ladybug wings.</p>
+            <p>Each place also has four pets to meet, found only rarely. The Backyard’s are a squirrel, a bumblebee, a bluebird and a butterfly. One pet at a time can tag along with Pip.</p>
+            <p>Finding a duplicate isn’t wasted: it turns into coins, and sometimes into an item you’re still missing.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── Pip ───────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="pip-title" data-section="pet-pip">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="pip-title">Meet Pip</h2>
+          <p>Pip is a small green companion with rosy cheeks. Pip is a partner, not a chore: Pip helps you get started, cheers when you do, and goes exploring on your behalf.</p>
+        </div>
+        <ul class="feature-list">
+          <li class="mini">
+            <h3>Make Pip yours</h3>
+            <p>Rename Pip, dress Pip up in hats, capes, wings and backpacks, and choose new looks as Pip levels up. Pip can reach level 30.</p>
+          </li>
+          <li class="mini">
+            <h3>Coins and the shop</h3>
+            <p>Coins come from adventures, small daily goals, weekly quests and a daily gift. They buy outfits and keepsakes in the shop. The shop only takes coins, never real money.</p>
+          </li>
+          <li class="mini">
+            <h3>No pet to neglect</h3>
+            <p>Pip doesn’t get hungry, sick or sad if you’re away. There’s no health meter to keep topped up, and missing a day doesn’t reset anything. When you come back, Pip is just happy to see you.</p>
+          </li>
+          <li class="mini">
+            <h3>Badges and gifts</h3>
+            <p>Badges count your real progress over time, like tasks started, steps done and tasks you picked back up. The daily gift counts the gifts you’ve opened, not calendar days, so it never resets if you miss one.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── FAQ ───────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="faq-title" data-section="faq">
+      <div class="wrap">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Is Tiny Pip a virtual pet app or a to-do app?</summary>
+            <p>Both, in that order of importance: the tasks come first. Tiny Pip helps you pick one thing and take a tiny first step, and the virtual pet side, Pip’s adventures and collections, exists to make that step feel worth it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I have to keep the app open for Pip to explore?</summary>
+            <p>No. Once you send Pip off, you can close the app. Pip keeps exploring and sends a “Pip’s back!” notification when the trip is over. Calling Pip back early gives you the unused Adventure Points back.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will Pip get hungry, sick or sad if I don’t open the app?</summary>
+            <p>No. Pip has no hunger or health meter to keep topped up, and missing a day doesn’t reset anything. When you come back, Pip is just happy to see you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Tiny Pip reward screen time?</summary>
+            <p>No. Opening the app and watching Pip explore earn nothing. Adventure Points come from starting tasks, finishing steps and tasks, and logging habits, so the only way to send Pip anywhere is to do something in real life.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I buy items or coins with real money?</summary>
+            <p>No. The shop only takes coins, and coins come from Pip’s adventures, small daily goals, weekly quests and daily gifts. Free and Plus get the same rewards and the same odds.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which places can Pip explore?</summary>
+            <p>Everyone starts in the Backyard. With Plus, the Forest, the Mountain and the Castle open too. When Tiny Pip launches, three more free places open: Candy Meadow, the Pirate Ship and the Crystal Cave.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is Tiny Pip free?</summary>
+            <p>Yes. Tiny Pip is free to download and use, and it’s in a free beta on iPhone and Android now. An optional Plus plan with extra places is coming at launch.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── More ──────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="more-title" data-section="related">
+      <div class="wrap">
+        <h2 id="more-title">Keep exploring</h2>
+        <ul class="related">
+          <li><a href="/features/#adventures"><strong>Adventures, in detail</strong><span>How exploring and finds work.</span></a></li>
+          <li><a href="/features/#free-and-plus"><strong>Free and Plus</strong><span>What’s free for good, and what Plus adds.</span></a></li>
+          <li><a href="/procrastination-app/"><strong>For procrastination</strong><span>A to-do app for the hardest part: starting.</span></a></li>
+          <li><a href="/task-breakdown/"><strong>Breaking tasks down</strong><span>Find the first tiny step.</span></a></li>
+          <li><a href="/gentle-productivity/"><strong>Gentle productivity</strong><span>No guilt, no streaks, rest allowed.</span></a></li>
+          <li><a href="/self-care-companion/"><strong>A self-care companion</strong><span>Check-ins, comfort and kindness.</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- partial:cta -->
+    <section class="content-section" aria-labelledby="cta-title" data-section="cta">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2 id="cta-title">Try Tiny Pip free</h2>
+          <p>Tiny Pip is in beta on iPhone and Android. Pick one thing, take a tiny first step, and send Pip exploring.</p>
+          <div class="hero-ctas">
+            <div class="hero-cta hero-cta--ios">
+              <a class="button" href="https://testflight.apple.com/join/zn4xnr6C" rel="noopener" data-cta="page_ios">Get it free on iPhone</a>
+              <p class="hero-hint">Opens TestFlight, Apple’s free app for betas.</p>
+            </div>
+            <div class="hero-cta hero-cta--android">
+              <a class="button" href="/#beta-android" data-cta="page_android">Get it free on Android</a>
+              <p class="hero-hint">A quick sign-up through Google Play.</p>
+            </div>
+          </div>
+          <p class="fine">Free beta. No account, no streaks. <a href="/#waitlist">How the beta works</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- /partial:cta -->
+  </main>
+
+  <!-- partial:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav class="footer-nav" aria-label="More about Tiny Pip">
+        <div>
+          <h2>Tiny Pip</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/features/">All features</a></li>
+            <li><a href="/features/#free-and-plus">Free and Plus</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#waitlist">Join the beta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Getting started</h2>
+          <ul>
+            <li><a href="/procrastination-app/">A procrastination app</a></li>
+            <li><a href="/task-paralysis/">Task paralysis</a></li>
+            <li><a href="/task-breakdown/">Breaking tasks down</a></li>
+            <li><a href="/adhd-friendly-task-app/">ADHD-friendly tasks</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Feeling better</h2>
+          <ul>
+            <li><a href="/gentle-productivity/">Gentle productivity</a></li>
+            <li><a href="/self-care-companion/">Self-care companion</a></li>
+            <li><a href="/virtual-pet-productivity-app/" aria-current="page">A virtual pet that helps</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="social-title">Follow Pip</p>
+      <ul class="social-links">
+        <li><a href="https://www.tiktok.com/@heytinypip" rel="me noopener" data-social="tiktok"><span>TikTok</span> @heytinypip</a></li>
+        <li><a href="https://www.instagram.com/heytinypip/" rel="me noopener" data-social="instagram"><span>Instagram</span> @heytinypip</a></li>
+      </ul>
+      <ul class="footer-links">
+        <li><a href="/privacy.html">Privacy policy</a></li>
+        <li><a href="mailto:feedback@heytinypip.com">feedback@heytinypip.com</a></li>
+      </ul>
+      <p>© <span data-year>2026</span> Emberforge Works, LLC</p>
+    </div>
+  </footer>
+  <!-- /partial:footer -->
+</body>
+</html>

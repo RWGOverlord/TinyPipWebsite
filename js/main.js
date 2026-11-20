@@ -143,6 +143,29 @@
     sync();
   }
 
+  // ─── Features menu ─────────────────────────────────────────────────────
+  // A <details>, so it works without this. Closes on Escape, on a tap
+  // outside it, and when one of its links is followed (same-page anchors
+  // would otherwise leave it open over the section).
+  document.querySelectorAll(".nav-menu").forEach(function (menu) {
+    var close = function () { menu.open = false; };
+    document.addEventListener("click", function (event) {
+      if (menu.open && !menu.contains(event.target)) close();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && menu.open) {
+        close();
+        menu.querySelector("summary").focus();
+      }
+    });
+    menu.querySelectorAll(".mega a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        track("nav_click", { link: link.getAttribute("href") });
+        close();
+      });
+    });
+  });
+
   // ─── Footer year ───────────────────────────────────────────────────────
   var year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());

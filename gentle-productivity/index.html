@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Analytics: setup and consent defaults in js/analytics.js -->
+  <script src="/js/analytics.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVT7NBYHYV"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gentle Productivity Without Guilt or Broken Streaks | Tiny Pip</title>
+  <meta name="description" content="Tiny Pip is a gentle productivity app with no streaks to lose and no guilt for missed days. A few good days a week is the goal, rest is always a choice, and reminders never bring up what you didn’t do.">
+  <link rel="canonical" href="https://heytinypip.com/gentle-productivity/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFF9EC">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tiny Pip">
+  <meta property="og:url" content="https://heytinypip.com/gentle-productivity/">
+  <meta property="og:title" content="Productivity shouldn’t make you feel worse">
+  <meta property="og:description" content="No streaks to lose, no guilt for missed days, and rest that counts. How Tiny Pip does gentle productivity.">
+  <meta property="og:image" content="https://heytinypip.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Tiny Pip app icon and Pip, a small green companion.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://heytinypip.com/gentle-productivity/#webpage",
+        "url": "https://heytinypip.com/gentle-productivity/",
+        "name": "Gentle productivity without guilt or broken streaks",
+        "description": "How Tiny Pip approaches productivity without streaks, guilt or pressure: a few good days a week, rest as a real choice, and reminders that never mention missed days.",
+        "isPartOf": { "@id": "https://heytinypip.com/#website" },
+        "about": { "@id": "https://heytinypip.com/#app" },
+        "primaryImageOfPage": "https://heytinypip.com/assets/img/app/tinypip-rest-is-part-of-it.jpg",
+        "breadcrumb": { "@id": "https://heytinypip.com/gentle-productivity/#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://heytinypip.com/gentle-productivity/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tiny Pip", "item": "https://heytinypip.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Gentle productivity", "item": "https://heytinypip.com/gentle-productivity/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://heytinypip.com/gentle-productivity/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Tiny Pip have streaks?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. There are no daily streaks to keep alive. Home shows your week instead, and the goal is a few days with some progress, 3 by default. Missing a day doesn’t reset anything, and each Monday starts fresh." }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if I don’t open the app for a while?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nothing bad. Your tasks, habits and Pip’s progress are all still there, nothing is lost or reset, and Pip doesn’t bring up how long you were away. Pip is just happy to see you." }
+          },
+          {
+            "@type": "Question",
+            "name": "What counts as a good day?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Any real progress: starting a task, finishing a step, logging a habit, a focus session, or a sick day spent resting. One small thing is enough to make the day count." }
+          },
+          {
+            "@type": "Question",
+            "name": "Will Tiny Pip nag me with notifications?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. You choose how often Pip checks in, from once a day to only when you ask. Quiet hours are on by default, Pip stops nudging for the day once you’ve made progress, and reminders never mention missed days or overdue tasks." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I stop partway through a task?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, always. “Done for now” and “Take a break” are on the task screen, and Pip offers a break whenever a focus timer ends or you stop early. You can leave a note for next time, and Pip will show it when you come back." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is gentle productivity just doing less?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not exactly. It’s doing what you can without making yourself feel worse about it. Tiny Pip still helps you start the things you’ve been putting off; it just never uses guilt, broken streaks or pressure to get you there." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function (d, n) {
+      var ua = n.userAgent;
+      var ios = /iPhone|iPad|iPod/.test(ua) || (n.platform === "MacIntel" && n.maxTouchPoints > 1);
+      d.dataset.os = ios ? "ios" : /Android/.test(ua) ? "android" : "other";
+      if (/musical_ly|Bytedance|TikTok/i.test(ua)) d.dataset.inapp = "tiktok";
+    })(document.documentElement, navigator);
+  </script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <!-- partial:header -->
+  <header class="site-header">
+    <div class="wrap site-header-bar">
+      <a class="brand-link" href="/" aria-label="Tiny Pip home">
+        <img src="/assets/img/icon-256.png" width="40" height="40" alt="">
+        <span>Tiny Pip</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-menu">
+          <summary data-cta="nav_features">Features</summary>
+          <div class="mega">
+            <div class="mega-groups">
+              <div class="mega-group">
+                <h2>When starting is hard</h2>
+                <ul>
+                  <li><a href="/features/#one-thing">One thing at a time<span>Not a giant list</span></a></li>
+                  <li><a href="/features/#tiny-first-steps">Tiny first steps<span>Small enough to begin</span></a></li>
+                  <li><a href="/task-breakdown/">Break it down<span>Help turning a task into steps</span></a></li>
+                  <li><a href="/features/#focus-timer">Focus timer<span>10, 20 or 30 quiet minutes</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>When productivity feels bad</h2>
+                <ul>
+                  <li><a href="/gentle-productivity/" aria-current="page">Gentle productivity<span>Why Pip never guilts you</span></a></li>
+                  <li><a href="/features/#no-streaks">No streaks to lose<span>Each week starts fresh</span></a></li>
+                  <li><a href="/features/#rest">Rest is allowed<span>Stopping is always a choice</span></a></li>
+                  <li><a href="/self-care-companion/">Self-care<span>Check-ins, comfort and kindness</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Your companion</h2>
+                <ul>
+                  <li><a href="/features/#pip">Meet Pip<span>A small friend who cheers</span></a></li>
+                  <li><a href="/virtual-pet-productivity-app/">Adventures<span>Your progress, Pip’s trips</span></a></li>
+                  <li><a href="/features/#collections">Collections and pets<span>Items, outfits and friends</span></a></li>
+                  <li><a href="/features/#places">Places to explore<span>From the Backyard on</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Building routines</h2>
+                <ul>
+                  <li><a href="/features/#habits">Habits<span>Water, reading, anything</span></a></li>
+                  <li><a href="/features/#reminders">Reminders<span>Gentle, and only when you want</span></a></li>
+                  <li><a href="/features/#your-week">Your week<span>A few good days, not every day</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a href="/features/">See all features</a>
+              <a href="/#how-title">How Tiny Pip works</a>
+              <a href="/features/#free-and-plus">Free and Plus</a>
+              <a href="/blog/">Blog</a>
+            </div>
+          </div>
+        </details>
+        <a class="button button--small" href="/#waitlist" data-cta="nav_beta">Get the beta</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /partial:header -->
+
+  <main>
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap page-hero-grid">
+        <div>
+          <ol class="breadcrumbs">
+            <li><a href="/">Home</a></li>
+            <li>Gentle productivity</li>
+          </ol>
+          <p class="eyebrow">Gentle productivity</p>
+          <h1 id="page-title">Productivity shouldn’t make you feel worse</h1>
+          <p class="lede">A lot of productivity tools run on pressure: streaks to protect, red overdue badges, reminders that sound disappointed. For many people, that pressure is exactly what makes starting harder. Tiny Pip is built to work without it.</p>
+          <p class="answer"><strong>Looking for a productivity app that doesn’t punish missed days?</strong> Tiny Pip has no streaks to lose. The goal is a few good days a week, missing a day resets nothing, rest is always one of the choices, and Pip’s reminders never mention what you didn’t do. It still helps you start things, just without guilt.</p>
+        </div>
+        <figure class="phone">
+          <div class="phone-screen">
+            <picture>
+              <source srcset="/assets/img/app/tinypip-rest-is-part-of-it.webp" type="image/webp">
+              <img src="/assets/img/app/tinypip-rest-is-part-of-it.jpg" width="600" height="1182" fetchpriority="high"
+                   alt="Pip and a bumblebee dozing with little Zs above them. Pip says “Rest is part of it. I’ll be here when you’re ready,” with a “Back home” button.">
+            </picture>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─── Why ───────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="why-title" data-section="gentle-why">
+      <div class="wrap">
+        <div class="text">
+          <h2 id="why-title">Why pressure backfires</h2>
+          <p>Streaks feel good while they last. Then life happens: a sick day, a hard week, a weekend away. The streak breaks, the number goes back to zero, and the app that was supposed to help now feels like a record of failing. A lot of people quietly stop opening it.</p>
+          <p>Guilt works the same way. When a task has been sitting for a while, an app that reminds you it’s overdue doesn’t make it easier to begin. It makes the task heavier. The longer you avoid it, the worse it feels to look at, and the more you avoid it.</p>
+          <p>Gentle productivity is the idea that you can get things done without that cycle: celebrate any start, let rest be a real option, and never make coming back feel like an apology. That’s what Tiny Pip is built around.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Your week ─────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="week-title" data-section="gentle-week">
+      <div class="wrap">
+        <article class="feature">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-one-task-home.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-one-task-home.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Tiny Pip’s home screen. Pip, in an explorer hat and backpack, asks “Still want to start ‘Tidy the kitchen’?” with two buttons: “Let’s start” and “Start something new.” At the top, the week reads “4 of 3 days this week.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>The week at the top: a few good days, not every day.</figcaption>
+          </figure>
+          <div class="text">
+            <h2 id="week-title">A few good days, not every day</h2>
+            <p>Instead of a streak, Tiny Pip’s home screen shows your week as seven little dots, Monday to Sunday. A day fills in when you make any real progress: starting a task, finishing a step, logging a habit, a focus session, or a sick day spent resting.</p>
+            <p>The goal is 3 days a week. If that’s too much or too little, you can choose anywhere from 2 to 7. When you get there, Pip says so. When you don’t, nothing happens at all. There’s no penalty, no reset and no sad message. Each Monday simply starts fresh.</p>
+            <p>The same goes for days you don’t open the app at all. Your tasks, habits and Pip’s progress are exactly where you left them.</p>
+          </div>
+        </article>
+
+        <article class="feature feature--flip">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-good-place-to-stop.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-good-place-to-stop.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="After stopping a focus timer at 15:43, Pip asks “Good place to stop? What’s next?” for “Cancel my gym membership.” The first button is “Take a break,” then “Keep going,” “Mark progress,” “Switch to something else” and “Back to the timer.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>When you stop early, a break is the first choice.</figcaption>
+          </figure>
+          <div class="text">
+            <h2>Stopping is a choice, not a failure</h2>
+            <p>Every task screen has <strong>Done for now</strong> and <strong>Take a break</strong> right on it. When you stop a focus timer early, Pip asks, “Good place to stop? What’s next?” and the first button is <strong>Take a break</strong>, above “Keep going.” When the timer runs out, Pip asks if you want a break, too.</p>
+            <p>Take one, and Pip offers to save a note for next time, then says: <em>“Rest is part of it. I’ll be here when you’re ready.”</em> When you come back, Pip shows your next step and your note, so picking it back up doesn’t start with remembering where you were.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── Principles ────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="rules-title" data-section="gentle-rules">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="rules-title">The rules Pip follows</h2>
+          <p>These aren’t settings you have to find. They’re how Tiny Pip works for everyone.</p>
+        </div>
+        <ul class="feature-list">
+          <li class="mini">
+            <h3>Starting is a win</h3>
+            <p>Tapping “I’ve started” earns more than finishing does. You don’t have to complete anything for the day to count.</p>
+          </li>
+          <li class="mini">
+            <h3>No guilt in reminders</h3>
+            <p>Pip’s messages never mention missed days, how long it’s been, or what’s overdue. There are no “we miss you” nudges.</p>
+          </li>
+          <li class="mini">
+            <h3>You choose how often</h3>
+            <p>Pip can check in once a day, now and then, or only when you ask. You can change it anytime in Settings.</p>
+          </li>
+          <li class="mini">
+            <h3>Quiet hours</h3>
+            <p>Quiet hours are on by default, overnight. And once you’ve made progress today, Pip stops nudging for the rest of the day.</p>
+          </li>
+          <li class="mini">
+            <h3>Nothing to grind</h3>
+            <p>Rewards level off after a busy day, so there’s no reason to push past what you need. Pip never tells you to do more.</p>
+          </li>
+          <li class="mini">
+            <h3>Gifts that wait for you</h3>
+            <p>The daily gift counts the gifts you’ve opened, not calendar days, so it never resets if you miss a day.</p>
+          </li>
+          <li class="mini">
+            <h3>Work stays at work</h3>
+            <p>Work tasks only come up during the work hours you set, so Pip won’t bring up a work email in your time off.</p>
+          </li>
+          <li class="mini">
+            <h3>Reminders that check in</h3>
+            <p>If you keep snoozing a reminder, Pip gently asks, “Still want this one?” Letting a reminder go is fine.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── Still helps ───────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="still-title" data-section="gentle-still">
+      <div class="wrap">
+        <article class="feature">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-tiny-first-steps.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-tiny-first-steps.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Pip says “This sounds like canceling a subscription. Here are some small steps; you can change them anytime,” above four steps, starting with “Find which account the subscription is on,” and the buttons “Save it for later,” “I’ve started” and “Already done.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>Gentle doesn’t mean doing nothing: one small step at a time.</figcaption>
+          </figure>
+          <div class="text">
+            <h2 id="still-title">Gentle, but still helpful</h2>
+            <p>Gentle productivity isn’t about lowering the bar until nothing matters. The bill still needs paying and the email still needs an answer. Tiny Pip just changes how you get there.</p>
+            <p>Instead of a long list, Pip suggests one thing. Instead of the whole task, Pip helps you find a first step small enough to take today. For common chores there are ready-made small steps, and for anything else you can ask for <a href="/task-breakdown/">help breaking it down</a>. And starting is rewarded, so the smallest real step still sends Pip on an adventure.</p>
+            <p>The point is to make starting feel possible, then let you decide how far to go.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── FAQ ───────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="faq-title" data-section="faq">
+      <div class="wrap">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Does Tiny Pip have streaks?</summary>
+            <p>No. There are no daily streaks to keep alive. Home shows your week instead, and the goal is a few days with some progress, 3 by default. Missing a day doesn’t reset anything, and each Monday starts fresh.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens if I don’t open the app for a while?</summary>
+            <p>Nothing bad. Your tasks, habits and Pip’s progress are all still there, nothing is lost or reset, and Pip doesn’t bring up how long you were away. Pip is just happy to see you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What counts as a good day?</summary>
+            <p>Any real progress: starting a task, finishing a step, logging a habit, a focus session, or a sick day spent resting. One small thing is enough to make the day count.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will Tiny Pip nag me with notifications?</summary>
+            <p>No. You choose how often Pip checks in, from once a day to only when you ask. Quiet hours are on by default, Pip stops nudging for the day once you’ve made progress, and reminders never mention missed days or overdue tasks.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I stop partway through a task?</summary>
+            <p>Yes, always. “Done for now” and “Take a break” are on the task screen, and Pip offers a break whenever a focus timer ends or you stop early. You can leave a note for next time, and Pip will show it when you come back.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is gentle productivity just doing less?</summary>
+            <p>Not exactly. It’s doing what you can without making yourself feel worse about it. Tiny Pip still helps you start the things you’ve been putting off; it just never uses guilt, broken streaks or pressure to get you there.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── More ──────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="more-title" data-section="related">
+      <div class="wrap">
+        <h2 id="more-title">Keep exploring</h2>
+        <ul class="related">
+          <li><a href="/features/#rest"><strong>Rest is allowed</strong><span>How breaks work in Tiny Pip.</span></a></li>
+          <li><a href="/features/#reminders"><strong>Gentle reminders</strong><span>Reminders and check-ins, your way.</span></a></li>
+          <li><a href="/self-care-companion/"><strong>A self-care companion</strong><span>Check-ins, comfort and kindness.</span></a></li>
+          <li><a href="/task-paralysis/"><strong>For task paralysis</strong><span>When you know what to do but can’t begin.</span></a></li>
+          <li><a href="/adhd-friendly-task-app/"><strong>ADHD-friendly</strong><span>Built around starting, not lists.</span></a></li>
+          <li><a href="/virtual-pet-productivity-app/"><strong>A virtual pet that helps</strong><span>Real progress, Pip’s adventures.</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- partial:cta -->
+    <section class="content-section" aria-labelledby="cta-title" data-section="cta">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2 id="cta-title">Try Tiny Pip free</h2>
+          <p>Tiny Pip is in beta on iPhone and Android. Pick one thing, take a tiny first step, and send Pip exploring.</p>
+          <div class="hero-ctas">
+            <div class="hero-cta hero-cta--ios">
+              <a class="button" href="https://testflight.apple.com/join/zn4xnr6C" rel="noopener" data-cta="page_ios">Get it free on iPhone</a>
+              <p class="hero-hint">Opens TestFlight, Apple’s free app for betas.</p>
+            </div>
+            <div class="hero-cta hero-cta--android">
+              <a class="button" href="/#beta-android" data-cta="page_android">Get it free on Android</a>
+              <p class="hero-hint">A quick sign-up through Google Play.</p>
+            </div>
+          </div>
+          <p class="fine">Free beta. No account, no streaks. <a href="/#waitlist">How the beta works</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- /partial:cta -->
+  </main>
+
+  <!-- partial:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav class="footer-nav" aria-label="More about Tiny Pip">
+        <div>
+          <h2>Tiny Pip</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/features/">All features</a></li>
+            <li><a href="/features/#free-and-plus">Free and Plus</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#waitlist">Join the beta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Getting started</h2>
+          <ul>
+            <li><a href="/procrastination-app/">A procrastination app</a></li>
+            <li><a href="/task-paralysis/">Task paralysis</a></li>
+            <li><a href="/task-breakdown/">Breaking tasks down</a></li>
+            <li><a href="/adhd-friendly-task-app/">ADHD-friendly tasks</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Feeling better</h2>
+          <ul>
+            <li><a href="/gentle-productivity/" aria-current="page">Gentle productivity</a></li>
+            <li><a href="/self-care-companion/">Self-care companion</a></li>
+            <li><a href="/virtual-pet-productivity-app/">A virtual pet that helps</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="social-title">Follow Pip</p>
+      <ul class="social-links">
+        <li><a href="https://www.tiktok.com/@heytinypip" rel="me noopener" data-social="tiktok"><span>TikTok</span> @heytinypip</a></li>
+        <li><a href="https://www.instagram.com/heytinypip/" rel="me noopener" data-social="instagram"><span>Instagram</span> @heytinypip</a></li>
+      </ul>
+      <ul class="footer-links">
+        <li><a href="/privacy.html">Privacy policy</a></li>
+        <li><a href="mailto:feedback@heytinypip.com">feedback@heytinypip.com</a></li>
+      </ul>
+      <p>© <span data-year>2026</span> Emberforge Works, LLC</p>
+    </div>
+  </footer>
+  <!-- /partial:footer -->
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Analytics: setup and consent defaults in js/analytics.js -->
+  <script src="/js/analytics.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVT7NBYHYV"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Break Overwhelming Tasks Into Tiny Steps | Tiny Pip</title>
+  <meta name="description" content="How Tiny Pip breaks a big task into small steps: ready-made steps for everyday chores, an optional AI helper for everything else, and steps you can edit before you start.">
+  <link rel="canonical" href="https://heytinypip.com/task-breakdown/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFF9EC">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tiny Pip">
+  <meta property="og:url" content="https://heytinypip.com/task-breakdown/">
+  <meta property="og:title" content="Don’t finish the whole task. Find the first tiny step.">
+  <meta property="og:description" content="Ready-made steps for everyday chores, an optional AI helper for everything else, and you decide which steps to keep.">
+  <meta property="og:image" content="https://heytinypip.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Tiny Pip app icon and Pip, a small green companion.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://heytinypip.com/task-breakdown/#webpage",
+        "url": "https://heytinypip.com/task-breakdown/",
+        "name": "Break overwhelming tasks into tiny steps",
+        "description": "How Tiny Pip breaks a big task into small steps: ready-made steps for everyday chores, an optional AI helper for everything else, and steps you can edit before you start.",
+        "isPartOf": {
+          "@id": "https://heytinypip.com/#website"
+        },
+        "about": {
+          "@id": "https://heytinypip.com/#app"
+        },
+        "primaryImageOfPage": "https://heytinypip.com/assets/img/app/tinypip-task-breakdown.jpg",
+        "breadcrumb": {
+          "@id": "https://heytinypip.com/task-breakdown/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://heytinypip.com/task-breakdown/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Tiny Pip",
+            "item": "https://heytinypip.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Task breakdown",
+            "item": "https://heytinypip.com/task-breakdown/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://heytinypip.com/task-breakdown/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is there an app that breaks tasks into smaller steps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Tiny Pip suggests small steps for everyday chores on its own, and for anything else, its optional AI helper suggests 3 to 7 small steps. You can edit, reorder or remove any step before saving."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Tiny Pip use AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if you ask. The AI helper runs when you tap “Help me break this down,” for that one task. Ready-made steps, reminders, check-ins and the game all work on your phone without AI."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the AI task breakdown free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Free includes a few AI breakdowns a week, and failed attempts don’t count. Plus, coming at launch, will have no weekly limit. Ready-made steps and your own steps are always free and unlimited."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the AI see?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Just the words of the task you asked about, plus your time zone. Not your other tasks, notes, habits or check-ins. The task and its steps aren’t kept after the steps come back."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I write my own steps instead?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose “Add my own steps” at any point, or change the suggested ones. Every step can be edited, skipped or removed later too."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work for work and school tasks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. When you add a task, you can mark it as personal, work or school, and the steps work the same way."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function (d, n) {
+      var ua = n.userAgent;
+      var ios = /iPhone|iPad|iPod/.test(ua) || (n.platform === "MacIntel" && n.maxTouchPoints > 1);
+      d.dataset.os = ios ? "ios" : /Android/.test(ua) ? "android" : "other";
+      if (/musical_ly|Bytedance|TikTok/i.test(ua)) d.dataset.inapp = "tiktok";
+    })(document.documentElement, navigator);
+  </script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <!-- partial:header -->
+  <header class="site-header">
+    <div class="wrap site-header-bar">
+      <a class="brand-link" href="/" aria-label="Tiny Pip home">
+        <img src="/assets/img/icon-256.png" width="40" height="40" alt="">
+        <span>Tiny Pip</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-menu">
+          <summary data-cta="nav_features">Features</summary>
+          <div class="mega">
+            <div class="mega-groups">
+              <div class="mega-group">
+                <h2>When starting is hard</h2>
+                <ul>
+                  <li><a href="/features/#one-thing">One thing at a time<span>Not a giant list</span></a></li>
+                  <li><a href="/features/#tiny-first-steps">Tiny first steps<span>Small enough to begin</span></a></li>
+                  <li><a href="/task-breakdown/" aria-current="page">Break it down<span>Help turning a task into steps</span></a></li>
+                  <li><a href="/features/#focus-timer">Focus timer<span>10, 20 or 30 quiet minutes</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>When productivity feels bad</h2>
+                <ul>
+                  <li><a href="/gentle-productivity/">Gentle productivity<span>Why Pip never guilts you</span></a></li>
+                  <li><a href="/features/#no-streaks">No streaks to lose<span>Each week starts fresh</span></a></li>
+                  <li><a href="/features/#rest">Rest is allowed<span>Stopping is always a choice</span></a></li>
+                  <li><a href="/self-care-companion/">Self-care<span>Check-ins, comfort and kindness</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Your companion</h2>
+                <ul>
+                  <li><a href="/features/#pip">Meet Pip<span>A small friend who cheers</span></a></li>
+                  <li><a href="/virtual-pet-productivity-app/">Adventures<span>Your progress, Pip’s trips</span></a></li>
+                  <li><a href="/features/#collections">Collections and pets<span>Items, outfits and friends</span></a></li>
+                  <li><a href="/features/#places">Places to explore<span>From the Backyard on</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Building routines</h2>
+                <ul>
+                  <li><a href="/features/#habits">Habits<span>Water, reading, anything</span></a></li>
+                  <li><a href="/features/#reminders">Reminders<span>Gentle, and only when you want</span></a></li>
+                  <li><a href="/features/#your-week">Your week<span>A few good days, not every day</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a href="/features/">See all features</a>
+              <a href="/#how-title">How Tiny Pip works</a>
+              <a href="/features/#free-and-plus">Free and Plus</a>
+              <a href="/blog/">Blog</a>
+            </div>
+          </div>
+        </details>
+        <a class="button button--small" href="/#waitlist" data-cta="nav_beta">Get the beta</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /partial:header -->
+
+  <main>
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap page-hero-grid">
+        <div>
+          <ol class="breadcrumbs">
+            <li><a href="/">Home</a></li>
+            <li>Task breakdown</li>
+          </ol>
+          <p class="eyebrow">Breaking tasks down</p>
+          <h1 id="page-title">Don’t finish the whole task. Find the first tiny step.</h1>
+          <p class="lede">A big task is hard to start because it isn’t really one thing. Breaking it into steps turns “somehow do all of this” into “do this one small thing next.” Tiny Pip does that with you.</p>
+          <p class="answer"><strong>How it works:</strong> Tiny Pip breaks tasks into small steps in two ways. For everyday chores, Pip suggests ready-made steps worked out on your phone. For anything else, an optional AI helper (“Help me break this down”) suggests 3 to 7 small steps. Either way, you can edit, reorder or remove any step before saving, or write your own.</p>
+        </div>
+        <figure class="phone">
+          <div class="phone-screen">
+              <picture>
+                <source srcset="/assets/img/app/tinypip-task-breakdown.webp" type="image/webp">
+                <img src="/assets/img/app/tinypip-task-breakdown.jpg" width="600" height="1182" fetchpriority="high"
+                     alt="After tapping “Help me break this down” on “Plan a birthday dinner for my mom,” Pip says “Here’s a smaller place to start. Change anything you like.” Below are editable steps, such as “Open a note and jot down three things your mom loves to eat,” each with buttons to move it up, move it down or remove it.">
+              </picture>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="flow-title" data-section="breakdown-flow">
+      <div class="wrap">
+        <div class="text">
+          <h2 id="flow-title">From “ugh” to a first step</h2>
+          <p>Adding a task in Tiny Pip takes a few taps:</p>
+          <ol class="loop">
+            <li>Name it: “What’s the task?”</li>
+            <li>Say how big it feels: <strong>Quick</strong>, <strong>A few steps</strong> or <strong>Time on it</strong>.</li>
+            <li>Say what it’s for: <strong>Personal</strong>, <strong>Work</strong> or <strong>School</strong>.</li>
+            <li>Get steps: ready-made, from the AI helper, or your own.</li>
+            <li>Tap <strong>I’ve started</strong>, or save it for later.</li>
+          </ol>
+          <p>A quick task doesn’t need breaking down; Pip says so: “A quick one! The step is just doing it.” A “time on it” task gets a focus session instead of steps. Everything else gets a short list of small steps.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="ways-title" data-section="breakdown-ways">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="ways-title">Two ways to get steps</h2>
+          <p>Ready-made steps cover the chores people put off most. The AI helper covers the rest. Neither is ever applied without your yes.</p>
+        </div>
+        <article class="feature" id="ready-made">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-tiny-first-steps.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-tiny-first-steps.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Pip says “This sounds like canceling a subscription. Here are some small steps; you can change them anytime,” above four steps, starting with “Find which account the subscription is on,” and the buttons “Save it for later,” “I’ve started” and “Already done.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>Ready-made steps for a common chore.</figcaption>
+          </figure>
+          <div class="text">
+            <h3>Ready-made steps for everyday chores</h3>
+            <p>Tiny Pip recognizes nine kinds of everyday task: paying a bill, canceling a subscription, contacting a company, replying to a message, writing something, making a call or a booking, laundry, dishes and tidying. When your task sounds like one of them, Pip says so and suggests a short set of steps, like “Find which account the subscription is on” for canceling a gym membership.</p>
+            <p>These steps are built into the app, so they work offline and nothing leaves your phone. They’re free, with no limit.</p>
+          </div>
+        </article>
+        <div class="text" id="ai-helper">
+            <h3>The AI helper, when you ask for it</h3>
+            <p>For a task without ready-made steps, Pip asks, “Want a little help getting started?” Tap <strong>Help me break this down</strong> and an AI helper suggests 3 to 7 short steps, or a single tiny step for a quick task. If the task is too vague to break down, it may ask you one question first.</p>
+            <p>The steps appear as a draft. You can edit any of them, move them up or down, remove them or add your own before you save. If the helper can’t make steps right then, for example when you’re offline, Pip says so and you can add your own or try again later. Attempts that fail don’t count toward your limit. (The screenshot at the top of this page is a real AI suggestion.)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="privacy-title" data-section="breakdown-privacy">
+      <div class="wrap">
+        <div class="text">
+          <h2 id="privacy-title">What’s sent, and what isn’t</h2>
+          <p>The AI helper only runs when you tap <strong>Help me break this down</strong>, one task at a time. Right on that screen, Pip says: <em>“Pip sends just these words to an AI helper. Nothing else leaves your phone.”</em></p>
+          <ul>
+            <li>What’s sent: that one task’s words, plus your time zone.</li>
+            <li>What isn’t: your other tasks, habits, check-ins, notes or name.</li>
+            <li>What’s kept: not the task or the steps. Only a random ID and a few counts, so the weekly limit works.</li>
+          </ul>
+          <p>Tiny Pip has no account, and everything else you enter stays on your phone. Details are in the <a href="/privacy.html#ai-help-with-steps-optional">privacy policy</a>.</p>
+          <h3>How many breakdowns you get</h3>
+          <p>Free includes a few AI breakdowns a week, and the app shows how many you have left. Plus, coming at launch, will have no weekly limit. Ready-made steps and your own steps are always unlimited. Asking for steps earns nothing in the game; doing them does.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="tiny-title" data-section="breakdown-tiny">
+      <div class="wrap">
+        <div class="text">
+          <h2 id="tiny-title">What makes a first step “tiny”</h2>
+          <p>A good first step is small enough that it’s hard to argue with. It usually has three things in common: it’s physical, it’s specific, and it doesn’t ask you to make a big decision. A few examples of the kind of first step that works:</p>
+          <ul>
+            <li><strong>“Do my taxes”</strong> → put last year’s tax papers on the table.</li>
+            <li><strong>“Email the landlord”</strong> → open a new email and write the subject line.</li>
+            <li><strong>“Clean the bedroom”</strong> → put the clothes on the floor into one pile.</li>
+            <li><strong>“Study for the exam”</strong> → open the notes for the first chapter.</li>
+            <li><strong>“Plan a birthday dinner for my mom”</strong> → open a note and jot down three things she loves to eat. (That one is a real suggestion from the AI helper, shown at the top of this page.)</li>
+          </ul>
+          <p>If a first step still feels like too much, make it smaller. Tiny Pip lets you edit any step at any time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="after-title" data-section="breakdown-after">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="after-title">After the breakdown</h2>
+          <p>Steps aren’t a checklist to dread. They’re one thing at a time, with room to stop.</p>
+        </div>
+        <article class="feature" id="doing-steps">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-start-task-reward.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-start-task-reward.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Pip celebrates: “Nice, you got started!” Badges show +15 XP and +30 AP for “Cancel my gym membership.” Below, the current step, “Find which account the subscription is on,” and the buttons “Done with this step,” “Focus timer,” “Take a break” and “Done for now.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>One step on screen at a time.</figcaption>
+          </figure>
+          <div class="text">
+            <h3>One step on the screen</h3>
+            <p>Once you start, Tiny Pip shows just the current step, with <strong>Done with this step</strong> and a <strong>Focus timer</strong> button. You can skip a step, edit it, add one, or see them all. Starting earns more than finishing, and finishing steps counts too.</p>
+            <p>When you stop, Pip offers to save a note, and next time Home shows your next step so you can pick it back up.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="faq-title" data-section="task-breakdown-faq">
+      <div class="wrap">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Is there an app that breaks tasks into smaller steps?</summary>
+            <p>Yes. Tiny Pip suggests small steps for everyday chores on its own, and for anything else, its optional AI helper suggests 3 to 7 small steps. You can edit, reorder or remove any step before saving.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Tiny Pip use AI?</summary>
+            <p>Only if you ask. The AI helper runs when you tap “Help me break this down,” for that one task. Ready-made steps, reminders, check-ins and the game all work on your phone without AI.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is the AI task breakdown free?</summary>
+            <p>Free includes a few AI breakdowns a week, and failed attempts don’t count. Plus, coming at launch, will have no weekly limit. Ready-made steps and your own steps are always free and unlimited.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does the AI see?</summary>
+            <p>Just the words of the task you asked about, plus your time zone. Not your other tasks, notes, habits or check-ins. The task and its steps aren’t kept after the steps come back.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I write my own steps instead?</summary>
+            <p>Yes. Choose “Add my own steps” at any point, or change the suggested ones. Every step can be edited, skipped or removed later too.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does it work for work and school tasks?</summary>
+            <p>Yes. When you add a task, you can mark it as personal, work or school, and the steps work the same way.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="more-title" data-section="task-breakdown-more">
+      <div class="wrap">
+        <h2 id="more-title">Keep exploring</h2>
+        <ul class="related">
+          <li><a href="/task-paralysis/"><strong>For task paralysis</strong><span>When you know what to do but can’t begin.</span></a></li>
+          <li><a href="/procrastination-app/"><strong>For procrastination</strong><span>A to-do app for the hardest part: starting.</span></a></li>
+          <li><a href="/features/"><strong>All features</strong><span>Everything Pip does, in one place.</span></a></li>
+          <li><a href="/adhd-friendly-task-app/"><strong>ADHD-friendly</strong><span>Built around starting, not long lists.</span></a></li>
+          <li><a href="/gentle-productivity/"><strong>Gentle productivity</strong><span>No guilt, no streaks, rest allowed.</span></a></li>
+          <li><a href="/virtual-pet-productivity-app/"><strong>A virtual pet that helps</strong><span>Real progress, Pip’s adventures.</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- partial:cta -->
+    <section class="content-section" aria-labelledby="cta-title" data-section="cta">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2 id="cta-title">Try Tiny Pip free</h2>
+          <p>Tiny Pip is in beta on iPhone and Android. Pick one thing, take a tiny first step, and send Pip exploring.</p>
+          <div class="hero-ctas">
+            <div class="hero-cta hero-cta--ios">
+              <a class="button" href="https://testflight.apple.com/join/zn4xnr6C" rel="noopener" data-cta="page_ios">Get it free on iPhone</a>
+              <p class="hero-hint">Opens TestFlight, Apple’s free app for betas.</p>
+            </div>
+            <div class="hero-cta hero-cta--android">
+              <a class="button" href="/#beta-android" data-cta="page_android">Get it free on Android</a>
+              <p class="hero-hint">A quick sign-up through Google Play.</p>
+            </div>
+          </div>
+          <p class="fine">Free beta. No account, no streaks. <a href="/#waitlist">How the beta works</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- /partial:cta -->
+  </main>
+
+  <!-- partial:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav class="footer-nav" aria-label="More about Tiny Pip">
+        <div>
+          <h2>Tiny Pip</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/features/">All features</a></li>
+            <li><a href="/features/#free-and-plus">Free and Plus</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#waitlist">Join the beta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Getting started</h2>
+          <ul>
+            <li><a href="/procrastination-app/">A procrastination app</a></li>
+            <li><a href="/task-paralysis/">Task paralysis</a></li>
+            <li><a href="/task-breakdown/" aria-current="page">Breaking tasks down</a></li>
+            <li><a href="/adhd-friendly-task-app/">ADHD-friendly tasks</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Feeling better</h2>
+          <ul>
+            <li><a href="/gentle-productivity/">Gentle productivity</a></li>
+            <li><a href="/self-care-companion/">Self-care companion</a></li>
+            <li><a href="/virtual-pet-productivity-app/">A virtual pet that helps</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="social-title">Follow Pip</p>
+      <ul class="social-links">
+        <li><a href="https://www.tiktok.com/@heytinypip" rel="me noopener" data-social="tiktok"><span>TikTok</span> @heytinypip</a></li>
+        <li><a href="https://www.instagram.com/heytinypip/" rel="me noopener" data-social="instagram"><span>Instagram</span> @heytinypip</a></li>
+      </ul>
+      <ul class="footer-links">
+        <li><a href="/privacy.html">Privacy policy</a></li>
+        <li><a href="mailto:feedback@heytinypip.com">feedback@heytinypip.com</a></li>
+      </ul>
+      <p>© <span data-year>2026</span> Emberforge Works, LLC</p>
+    </div>
+  </footer>
+  <!-- /partial:footer -->
+</body>
+</html>

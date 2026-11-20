@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Analytics: setup and consent defaults in js/analytics.js -->
+  <script src="/js/analytics.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVT7NBYHYV"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Self-Care Companion That Helps You Start | Tiny Pip</title>
+  <meta name="description" content="Tiny Pip is a gentle self-care companion: quick mood check-ins you can skip, small kind ideas on hard days, comfort when you’re sick, and habits without streaks. A productivity and self-care app, not therapy.">
+  <link rel="canonical" href="https://heytinypip.com/self-care-companion/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFF9EC">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tiny Pip">
+  <meta property="og:url" content="https://heytinypip.com/self-care-companion/">
+  <meta property="og:title" content="Self-care doesn’t have to become another checklist">
+  <meta property="og:description" content="Quick check-ins, small kind ideas, comfort on sick days and habits without streaks, with Pip for company.">
+  <meta property="og:image" content="https://heytinypip.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Tiny Pip app icon and Pip, a small green companion.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://heytinypip.com/self-care-companion/#webpage",
+        "url": "https://heytinypip.com/self-care-companion/",
+        "name": "A self-care companion that helps you start",
+        "description": "How Tiny Pip supports everyday self-care with skippable mood check-ins, small kind ideas, comfort on sick days, optional weekly look-backs and habits without streaks. Tiny Pip is not therapy or medical care.",
+        "isPartOf": { "@id": "https://heytinypip.com/#website" },
+        "about": { "@id": "https://heytinypip.com/#app" },
+        "primaryImageOfPage": "https://heytinypip.com/assets/img/app/tinypip-mood-check-in.jpg",
+        "breadcrumb": { "@id": "https://heytinypip.com/self-care-companion/#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://heytinypip.com/self-care-companion/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tiny Pip", "item": "https://heytinypip.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Self-care companion", "item": "https://heytinypip.com/self-care-companion/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://heytinypip.com/self-care-companion/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Tiny Pip a mental health app?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Tiny Pip is a productivity and self-care app for everyday tasks and habits. It isn’t therapy, medical care or mental-health treatment, and it doesn’t diagnose anything. If you’re struggling, please reach out to someone you trust or a local support line." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I have to do the mood check-ins?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Every check-in has “Skip for now,” and a skipped check-in is just skipped. You can also turn the check-in reminders off in Settings." }
+          },
+          {
+            "@type": "Question",
+            "name": "Where are my moods kept?",
+            "acceptedAnswer": { "@type": "Answer", "text": "On your phone. Your check-ins and the patterns Pip notices from them are worked out and saved on your phone, and Tiny Pip has no account." }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I’m sick?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Tap “I’m feeling sick” on the check-in. Pip switches to one-tap comfort ideas like a nap, a warm shower, tea or water. They count as progress, and sick days count toward your week." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does self-care in Tiny Pip have streaks?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. There are no streaks anywhere in Tiny Pip. Missing a check-in, a habit or a whole day doesn’t reset anything." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Tiny Pip use AI to talk about my feelings?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Check-ins, suggestions and patterns all work on your phone without AI. The only AI feature is the optional “Help me break this down” button for splitting a task into steps." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function (d, n) {
+      var ua = n.userAgent;
+      var ios = /iPhone|iPad|iPod/.test(ua) || (n.platform === "MacIntel" && n.maxTouchPoints > 1);
+      d.dataset.os = ios ? "ios" : /Android/.test(ua) ? "android" : "other";
+      if (/musical_ly|Bytedance|TikTok/i.test(ua)) d.dataset.inapp = "tiktok";
+    })(document.documentElement, navigator);
+  </script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <!-- partial:header -->
+  <header class="site-header">
+    <div class="wrap site-header-bar">
+      <a class="brand-link" href="/" aria-label="Tiny Pip home">
+        <img src="/assets/img/icon-256.png" width="40" height="40" alt="">
+        <span>Tiny Pip</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-menu">
+          <summary data-cta="nav_features">Features</summary>
+          <div class="mega">
+            <div class="mega-groups">
+              <div class="mega-group">
+                <h2>When starting is hard</h2>
+                <ul>
+                  <li><a href="/features/#one-thing">One thing at a time<span>Not a giant list</span></a></li>
+                  <li><a href="/features/#tiny-first-steps">Tiny first steps<span>Small enough to begin</span></a></li>
+                  <li><a href="/task-breakdown/">Break it down<span>Help turning a task into steps</span></a></li>
+                  <li><a href="/features/#focus-timer">Focus timer<span>10, 20 or 30 quiet minutes</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>When productivity feels bad</h2>
+                <ul>
+                  <li><a href="/gentle-productivity/">Gentle productivity<span>Why Pip never guilts you</span></a></li>
+                  <li><a href="/features/#no-streaks">No streaks to lose<span>Each week starts fresh</span></a></li>
+                  <li><a href="/features/#rest">Rest is allowed<span>Stopping is always a choice</span></a></li>
+                  <li><a href="/self-care-companion/" aria-current="page">Self-care<span>Check-ins, comfort and kindness</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Your companion</h2>
+                <ul>
+                  <li><a href="/features/#pip">Meet Pip<span>A small friend who cheers</span></a></li>
+                  <li><a href="/virtual-pet-productivity-app/">Adventures<span>Your progress, Pip’s trips</span></a></li>
+                  <li><a href="/features/#collections">Collections and pets<span>Items, outfits and friends</span></a></li>
+                  <li><a href="/features/#places">Places to explore<span>From the Backyard on</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-group">
+                <h2>Building routines</h2>
+                <ul>
+                  <li><a href="/features/#habits">Habits<span>Water, reading, anything</span></a></li>
+                  <li><a href="/features/#reminders">Reminders<span>Gentle, and only when you want</span></a></li>
+                  <li><a href="/features/#your-week">Your week<span>A few good days, not every day</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a href="/features/">See all features</a>
+              <a href="/#how-title">How Tiny Pip works</a>
+              <a href="/features/#free-and-plus">Free and Plus</a>
+              <a href="/blog/">Blog</a>
+            </div>
+          </div>
+        </details>
+        <a class="button button--small" href="/#waitlist" data-cta="nav_beta">Get the beta</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /partial:header -->
+
+  <main>
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap page-hero-grid">
+        <div>
+          <ol class="breadcrumbs">
+            <li><a href="/">Home</a></li>
+            <li>Self-care companion</li>
+          </ol>
+          <p class="eyebrow">A self-care companion</p>
+          <h1 id="page-title">Self-care doesn’t have to become another checklist</h1>
+          <p class="lede">Drink more water. Meditate. Journal. Go outside. Self-care advice can pile up until it looks a lot like a to-do list, and then it’s one more thing you’re behind on. Tiny Pip keeps self-care small, optional and kind.</p>
+          <p class="answer"><strong>Looking for a gentle self-care app without streaks?</strong> Tiny Pip is a small companion for everyday tasks and self-care. Pip checks in on how you feel (you can always skip), suggests one small kind idea on a hard day, switches to comfort mode when you’re sick, and helps with habits without ever counting what you missed.</p>
+        </div>
+        <figure class="phone">
+          <div class="phone-screen">
+            <picture>
+              <source srcset="/assets/img/app/tinypip-mood-check-in.webp" type="image/webp">
+              <img src="/assets/img/app/tinypip-mood-check-in.jpg" width="600" height="1182" fetchpriority="high"
+                   alt="A mood check-in asking “How did today feel?” with five faces: bad, meh, okay, good and great, plus “I’m feeling sick” and “Skip for now.”">
+            </picture>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─── Check-ins ─────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="checkin-title" data-section="selfcare-checkins">
+      <div class="wrap">
+        <div class="text">
+          <h2 id="checkin-title">A check-in that takes a second</h2>
+          <p>In the morning and the evening, Pip can ask how you feel. There are five faces: bad, meh, okay, good and great. Tap one, and that’s it. There’s nothing to write, and <strong>Skip for now</strong> is always right there.</p>
+          <p>If you tap bad or meh, Pip doesn’t try to fix your day. Pip offers one small, kind idea, something you could do in a minute or two, and asks, “Need to talk to someone?” in case you do.</p>
+          <p>After about five days of check-ins, Pip may notice a gentle pattern or two, like how your days tend to feel. Pip keeps it to a couple at most, and works them out on your phone. Your moods aren’t sent anywhere.</p>
+          <p>Reminders for check-ins only come if that check-in isn’t done yet, and you can turn them off in Settings. Skipping one is just skipping one.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Sick days ─────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="sick-title" data-section="selfcare-sick">
+      <div class="wrap">
+        <ul class="feature-list">
+          <li class="mini">
+            <h3 id="sick-title">When you’re under the weather</h3>
+            <p>Tap <strong>I’m feeling sick</strong> on the check-in, and rest becomes the day’s job. Pip offers one-tap comfort ideas like a nap, a warm shower, tea or a glass of water. Each one counts as progress and earns Adventure Points, and sick days count toward your week. After a few days, Pip asks if you’re feeling any better.</p>
+          </li>
+          <li class="mini">
+            <h3>Small kind ideas</h3>
+            <p>If you add a task with words like “tired,” “overwhelmed” or “anxious,” Pip suggests three small, kind things you could do instead or first. You can take one, or carry on with your task.</p>
+          </li>
+          <li class="mini">
+            <h3>A weekly look back, if you want one</h3>
+            <p>On Sunday afternoons, Pip invites you to look back on the week: how it felt, what went well, what you’d like to focus on. Choose “Not this week” and it waits until next Sunday. On Monday, Pip can suggest a small habit for the focus you picked.</p>
+          </li>
+          <li class="mini">
+            <h3>Rest that counts</h3>
+            <p>Taking a break is always one of the choices. When you do, Pip says, “Rest is part of it. I’ll be here when you’re ready.” <a href="/gentle-productivity/">More about rest and gentle productivity</a>.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── Habits ────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="habits-title" data-section="selfcare-habits">
+      <div class="wrap">
+        <article class="feature">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-habit-tracking.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-habit-tracking.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Logging a habit: Pip asks “Ready to log ‘Drink water’?” The habit shows 3 of 8 glasses today, every day, with “+1 glasses” and “+5 glasses” buttons and day choices for Mon, Tue, Yesterday and Today.">
+                </picture>
+              </div>
+            </div>
+            <figcaption>Three glasses out of eight still counts.</figcaption>
+          </figure>
+          <div class="text">
+            <h2 id="habits-title">Self-care habits, without the scorecard</h2>
+            <p>Habits in Tiny Pip can be once a day, like taking a walk, or measured, like glasses of water or minutes of reading. Today’s habits sit on Home as little rings, and one tap logs a glass, starts a timer or marks it done.</p>
+            <p>Not sure where to start? Pip has dozens of small self-care ideas to pick from, in areas like calm, rest, self-kindness, moving, getting outside and connecting with people. You decide which days a habit is for, so a weekday habit doesn’t show up on your weekend.</p>
+            <p>Forgot to log yesterday? Fill it in. Didn’t do it at all? Nothing resets. Every bit of a habit you do log, even three glasses out of eight, is still progress Pip celebrates.</p>
+            <p>You can also add medicines and vitamins with your own reminder times. They’re reminders, not medical advice, and they don’t count toward the free habit limit.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── Starting ──────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="start-title" data-section="selfcare-start">
+      <div class="wrap">
+        <article class="feature feature--flip">
+          <figure>
+            <div class="phone">
+              <div class="phone-screen">
+                <picture>
+                  <source srcset="/assets/img/app/tinypip-pick-up-where-you-left-off.webp" type="image/webp">
+                  <img src="/assets/img/app/tinypip-pick-up-where-you-left-off.jpg" width="600" height="1182" loading="lazy" decoding="async"
+                       alt="Pip asks “Want to pick up ‘Cancel my gym membership’?” A card shows the next step, “Find which account the subscription is on,” and a note: “Password is in the blue notebook.”">
+                </picture>
+              </div>
+            </div>
+            <figcaption>The things you’ve been putting off, one step at a time.</figcaption>
+          </figure>
+          <div class="text">
+            <h2 id="start-title">Self-care includes the things you’ve been avoiding</h2>
+            <p>Sometimes the kindest thing you can do for yourself is finally deal with the bill, the email or the appointment that’s been hanging over you. That’s the other half of Tiny Pip: it helps you pick one thing and take a tiny first step.</p>
+            <p>Starting is celebrated more than finishing, so you can stop whenever you need to, leave yourself a note, and pick it back up later. Each real step you take earns Pip time to go exploring. <a href="/procrastination-app/">How Tiny Pip helps you start</a>.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── Not therapy ───────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="boundaries-title" data-section="selfcare-boundaries">
+      <div class="wrap">
+        <div class="text">
+          <h2 id="boundaries-title">What Tiny Pip is, and isn’t</h2>
+          <p>Tiny Pip is an everyday companion for tasks, habits and small acts of self-care. Pip is encouraging, not clinical, and Pip doesn’t pretend to be a counselor.</p>
+          <div class="note">
+            <p><strong>Tiny Pip is not therapy, medical care or mental-health treatment, and it isn’t diagnostic software.</strong> It doesn’t assess, diagnose or treat any condition.</p>
+            <p>If you type words in Tiny Pip that suggest you might be in crisis, Pip shows ways to reach support right away: in the US, call or text 988, or text HOME to 741741 for the Crisis Text Line; elsewhere, findahelpline.com lists local lines. If you’re struggling, please reach out to someone you trust or a local support line.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FAQ ───────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="faq-title" data-section="faq">
+      <div class="wrap">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Is Tiny Pip a mental health app?</summary>
+            <p>No. Tiny Pip is a productivity and self-care app for everyday tasks and habits. It isn’t therapy, medical care or mental-health treatment, and it doesn’t diagnose anything. If you’re struggling, please reach out to someone you trust or a local support line.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I have to do the mood check-ins?</summary>
+            <p>No. Every check-in has “Skip for now,” and a skipped check-in is just skipped. You can also turn the check-in reminders off in Settings.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where are my moods kept?</summary>
+            <p>On your phone. Your check-ins and the patterns Pip notices from them are worked out and saved on your phone, and Tiny Pip has no account.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I’m sick?</summary>
+            <p>Tap “I’m feeling sick” on the check-in. Pip switches to one-tap comfort ideas like a nap, a warm shower, tea or water. They count as progress, and sick days count toward your week.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does self-care in Tiny Pip have streaks?</summary>
+            <p>No. There are no streaks anywhere in Tiny Pip. Missing a check-in, a habit or a whole day doesn’t reset anything.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Tiny Pip use AI to talk about my feelings?</summary>
+            <p>No. Check-ins, suggestions and patterns all work on your phone without AI. The only AI feature is the optional “Help me break this down” button for splitting a task into steps.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── More ──────────────────────────────────────────────── -->
+    <section class="content-section" aria-labelledby="more-title" data-section="related">
+      <div class="wrap">
+        <h2 id="more-title">Keep exploring</h2>
+        <ul class="related">
+          <li><a href="/features/#check-ins"><strong>Check-ins, in detail</strong><span>How mood check-ins work.</span></a></li>
+          <li><a href="/features/#habits"><strong>Habits</strong><span>Water, reading, anything.</span></a></li>
+          <li><a href="/gentle-productivity/"><strong>Gentle productivity</strong><span>No guilt, no streaks, rest allowed.</span></a></li>
+          <li><a href="/task-paralysis/"><strong>For task paralysis</strong><span>When you know what to do but can’t begin.</span></a></li>
+          <li><a href="/adhd-friendly-task-app/"><strong>ADHD-friendly</strong><span>Built around starting, not lists.</span></a></li>
+          <li><a href="/virtual-pet-productivity-app/"><strong>A virtual pet that helps</strong><span>Real progress, Pip’s adventures.</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- partial:cta -->
+    <section class="content-section" aria-labelledby="cta-title" data-section="cta">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2 id="cta-title">Try Tiny Pip free</h2>
+          <p>Tiny Pip is in beta on iPhone and Android. Pick one thing, take a tiny first step, and send Pip exploring.</p>
+          <div class="hero-ctas">
+            <div class="hero-cta hero-cta--ios">
+              <a class="button" href="https://testflight.apple.com/join/zn4xnr6C" rel="noopener" data-cta="page_ios">Get it free on iPhone</a>
+              <p class="hero-hint">Opens TestFlight, Apple’s free app for betas.</p>
+            </div>
+            <div class="hero-cta hero-cta--android">
+              <a class="button" href="/#beta-android" data-cta="page_android">Get it free on Android</a>
+              <p class="hero-hint">A quick sign-up through Google Play.</p>
+            </div>
+          </div>
+          <p class="fine">Free beta. No account, no streaks. <a href="/#waitlist">How the beta works</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- /partial:cta -->
+  </main>
+
+  <!-- partial:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav class="footer-nav" aria-label="More about Tiny Pip">
+        <div>
+          <h2>Tiny Pip</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/features/">All features</a></li>
+            <li><a href="/features/#free-and-plus">Free and Plus</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#waitlist">Join the beta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Getting started</h2>
+          <ul>
+            <li><a href="/procrastination-app/">A procrastination app</a></li>
+            <li><a href="/task-paralysis/">Task paralysis</a></li>
+            <li><a href="/task-breakdown/">Breaking tasks down</a></li>
+            <li><a href="/adhd-friendly-task-app/">ADHD-friendly tasks</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Feeling better</h2>
+          <ul>
+            <li><a href="/gentle-productivity/">Gentle productivity</a></li>
+            <li><a href="/self-care-companion/" aria-current="page">Self-care companion</a></li>
+            <li><a href="/virtual-pet-productivity-app/">A virtual pet that helps</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="social-title">Follow Pip</p>
+      <ul class="social-links">
+        <li><a href="https://www.tiktok.com/@heytinypip" rel="me noopener" data-social="tiktok"><span>TikTok</span> @heytinypip</a></li>
+        <li><a href="https://www.instagram.com/heytinypip/" rel="me noopener" data-social="instagram"><span>Instagram</span> @heytinypip</a></li>
+      </ul>
+      <ul class="footer-links">
+        <li><a href="/privacy.html">Privacy policy</a></li>
+        <li><a href="mailto:feedback@heytinypip.com">feedback@heytinypip.com</a></li>
+      </ul>
+      <p>© <span data-year>2026</span> Emberforge Works, LLC</p>
+    </div>
+  </footer>
+  <!-- /partial:footer -->
+</body>
+</html>
