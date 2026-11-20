@@ -5,8 +5,15 @@ The landing page and privacy policy for [Tiny Pip](https://heytinypip.com). Plai
 ## Files
 
 - `index.html`: the landing page (hero, features, screenshots, joining the beta, questions).
-- `features/index.html`: everything the app does, grouped by what you're struggling with. Served at `/features/`.
-- Topic pages, each a folder with an `index.html`, served at `/<folder>/`: `procrastination-app`, `task-paralysis`, `task-breakdown`, `adhd-friendly-task-app`, `gentle-productivity`, `self-care-companion`, `virtual-pet-productivity-app`.
+- `features/index.html` (`/features/`): a short overview. One card per group links to that group's page; it also holds Free vs Plus, how the AI is used, and privacy.
+- The four group pages, one per column of the Features menu. Each folder has an `index.html`, served at `/<folder>/`:
+  - When starting is hard: `procrastination-app`
+  - When productivity feels bad: `gentle-productivity`
+  - Your companion: `virtual-pet-productivity-app`
+  - Self-care and routines: `self-care-companion`
+- Narrower pages under "When starting is hard": `task-paralysis`, `task-breakdown`, `adhd-friendly-task-app`.
+- `tiny-pip-vs-finch`: the comparison page. `blog/`: the blog index and one folder per article.
+- Detail lives on the group pages, not on `/features/`, so each topic is written once. The menu links to sections of those pages (`/gentle-productivity/#rest` and so on); if you rename a section's `id`, update `partials/header.html`.
 - `privacy.html`: the privacy policy. It mirrors the app's `docs/privacy-policy.md` in the TinyPip repo and adds a section for the website.
 - `partials/`: the shared header (with the Features menu), footer and beta card. See below.
 - `css/style.css`: all styles. Colors and shapes follow the app's "meadow" theme.

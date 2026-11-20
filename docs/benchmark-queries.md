@@ -24,7 +24,7 @@ The goal isn't to show up everywhere at once. It's to own a few query families w
 | 7 | What are some alternatives to Finch if I care more about getting tasks started? | Comparison | (no page yet; see the plan's comparison phase) |
 | 8 | I have ADHD and struggle most with starting tasks. What apps should I look at? | ADHD | /adhd-friendly-task-app/ |
 | 9 | I need a to-do app that feels more like self-care than work. | Self-care | /self-care-companion/ |
-| 10 | I keep making huge to-do lists and then doing none of it. Is there something simpler? | Starting | /procrastination-app/, /features/#one-thing |
+| 10 | I keep making huge to-do lists and then doing none of it. Is there something simpler? | Starting | /procrastination-app/, /procrastination-app/#one-thing |
 
 ## Google searches
 
